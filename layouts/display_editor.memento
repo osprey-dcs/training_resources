@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<memento show_menu="true" show_statusbar="true" show_tabs="true" show_toolbar="true">
+    <DockStage_MAIN height="724.0" width="1339.0" x="151.0" y="27.0">
+        <split pos="0.21250941974378296">
+            <pane selected="0">
+                <DockItem_bf3d731f_fe03_4da8_83e7_be02138c531a application="file_browser" col_width0="200.0" col_width1="61.0" col_width2="1258.74658203125" directory="/opt/training_resources/opi" show_col2="false"/>
+            </pane>
+            <pane selected="0">
+                <DockItem_990e5cae_d639_404a_9a5f_fcfaaa7ac1f5 application="display_editor" input_uri="file:/opt/training_resources/opi/new_display.bob" prop_divider="0.7667946257197696" tree_divider="0.1295585412667946"/>
+            </pane>
+        </split>
+    </DockStage_MAIN>
+</memento>
