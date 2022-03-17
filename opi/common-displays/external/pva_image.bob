@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<display version="2.0.0">
+  <name>Display</name>
+  <widget type="image" version="2.0.0">
+    <name>Image</name>
+    <pv_name>pva://$(Sys)$(Dev)$(Pva)$(Image)</pv_name>
+    <x>50</x>
+    <y>90</y>
+    <width>480</width>
+    <height>430</height>
+    <x_axis>
+      <visible>true</visible>
+      <title>X</title>
+      <minimum>0.0</minimum>
+      <maximum>1024.0</maximum>
+      <title_font>
+        <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+        </font>
+      </title_font>
+      <scale_font>
+        <font name="Default" family="Liberation Sans" style="REGULAR" size="14.0">
+        </font>
+      </scale_font>
+    </x_axis>
+    <y_axis>
+      <visible>true</visible>
+      <title>Y</title>
+      <minimum>0.0</minimum>
+      <maximum>768.0</maximum>
+      <title_font>
+        <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+        </font>
+      </title_font>
+      <scale_font>
+        <font name="Default" family="Liberation Sans" style="REGULAR" size="14.0">
+        </font>
+      </scale_font>
+    </y_axis>
+  </widget>
+</display>

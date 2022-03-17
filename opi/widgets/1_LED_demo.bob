@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<display version="2.0.0">
+  <name>LEDs</name>
+  <widget type="led" version="2.0.0">
+    <name>LED</name>
+    <pv_name>sim://flipflop</pv_name>
+    <x>190</x>
+    <y>30</y>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update</name>
+    <pv_name>sim://flipflop</pv_name>
+    <x>60</x>
+    <y>30</y>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_1</name>
+    <pv_name>sim://flipflop</pv_name>
+    <x>190</x>
+    <y>60</y>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_1</name>
+    <pv_name>sim://flipflop</pv_name>
+    <x>60</x>
+    <y>60</y>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_2</name>
+    <pv_name>sim://flipflop</pv_name>
+    <x>190</x>
+    <y>90</y>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_2</name>
+    <pv_name>sim://flipflop</pv_name>
+    <x>60</x>
+    <y>90</y>
+  </widget>
+  <widget type="rectangle" version="2.0.0">
+    <name>Rectangle</name>
+    <x>10</x>
+    <y>129</y>
+    <width>240</width>
+    <height>2</height>
+  </widget>
+  <widget type="multi_state_led" version="2.0.0">
+    <name>LED (Multi State)</name>
+    <pv_name>loc://multi_state_value(0)</pv_name>
+    <x>190</x>
+    <y>150</y>
+    <square>true</square>
+    <states>
+      <state>
+        <value>0</value>
+        <label></label>
+        <color>
+          <color name="Off" red="60" green="100" blue="60">
+          </color>
+        </color>
+      </state>
+      <state>
+        <value>1</value>
+        <label></label>
+        <color>
+          <color name="On" red="0" green="255" blue="0">
+          </color>
+        </color>
+      </state>
+      <state>
+        <value>2</value>
+        <label></label>
+        <color>
+          <color name="MAJOR" red="255" green="0" blue="0">
+          </color>
+        </color>
+      </state>
+      <state>
+        <value>3</value>
+        <label></label>
+        <color>
+          <color name="MINOR" red="255" green="128" blue="0">
+          </color>
+        </color>
+      </state>
+    </states>
+    <fallback_label></fallback_label>
+  </widget>
+  <widget type="spinner" version="2.0.0">
+    <name>Spinner</name>
+    <pv_name>loc://multi_state_value(0)</pv_name>
+    <x>60</x>
+    <y>150</y>
+    <maximum>4.0</maximum>
+    <limits_from_pv>false</limits_from_pv>
+  </widget>
+</display>

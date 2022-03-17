@@ -1,0 +1,1249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<display version="2.0.0">
+  <name>Heater Demo</name>
+  <macros>
+    <Num>1</Num>
+  </macros>
+  <height>750</height>
+  <background_color>
+    <color name="GlobalBG" red="240" green="240" blue="240">
+    </color>
+  </background_color>
+  <actions>
+  </actions>
+  <widget type="label" version="2.0.0">
+    <name>Label_6</name>
+    <text>Fishtank Heater Demo</text>
+    <width>800</width>
+    <height>50</height>
+    <font>
+      <font family="Sans" style="BOLD" size="19.801980198019802">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="3" green="116" blue="176">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+    <tooltip>$(pv_name)
+$(pv_value)</tooltip>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>Room Temp</name>
+    <x>18</x>
+    <y>66</y>
+    <width>138</width>
+    <height>295</height>
+    <style>1</style>
+    <font>
+      <font family="Sans" style="BOLD" size="10.891089108910892">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="3" green="116" blue="176">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <actions>
+    </actions>
+    <widget type="thermometer" version="2.0.0">
+      <name>Thermometer</name>
+      <pv_name>TST{Room:$(Num)}T-Sp</pv_name>
+      <x>24</x>
+      <y>138</y>
+      <width>90</width>
+      <height>127</height>
+      <fill_color>
+        <color red="255" green="0" blue="0">
+        </color>
+      </fill_color>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_28</name>
+      <text>Setpoint</text>
+      <x>6</x>
+      <y>9</y>
+      <width>121</width>
+      <height>19</height>
+      <font>
+        <font family="Sans" style="BOLD" size="8.910891089108912">
+        </font>
+      </font>
+      <background_color>
+        <color name="GlobalBG" red="240" green="240" blue="240">
+        </color>
+      </background_color>
+      <transparent>false</transparent>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_28</name>
+      <text>Readback</text>
+      <x>6</x>
+      <y>78</y>
+      <width>121</width>
+      <height>19</height>
+      <font>
+        <font family="Sans" style="BOLD" size="8.910891089108912">
+        </font>
+      </font>
+      <background_color>
+        <color name="GlobalBG" red="240" green="240" blue="240">
+        </color>
+      </background_color>
+      <transparent>false</transparent>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_3</name>
+      <pv_name>TST{Room:$(Num)}T-Sp</pv_name>
+      <x>18</x>
+      <y>102</y>
+      <width>108</width>
+      <height>25</height>
+      <font>
+        <font family="Sans" style="REGULAR" size="8.910891089108912">
+        </font>
+      </font>
+      <background_color>
+        <color name="White" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>Text Input</name>
+      <pv_name>TST{Room:$(Num)}T-Sp</pv_name>
+      <x>18</x>
+      <y>36</y>
+      <width>108</width>
+      <height>25</height>
+      <font>
+        <font family="Sans" style="REGULAR" size="8.910891089108912">
+        </font>
+      </font>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <actions>
+      </actions>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="polyline" version="2.0.0">
+      <name>Polyline</name>
+      <y>72</y>
+      <width>138</width>
+      <height>1</height>
+      <line_width>1</line_width>
+      <line_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </line_color>
+      <points>
+        <point x="0.0" y="0.0">
+        </point>
+        <point x="137.0" y="0.0">
+        </point>
+        <point x="137.0" y="0.0">
+        </point>
+      </points>
+      <actions>
+      </actions>
+      <tooltip>$(pv_name)
+$(pv_value)</tooltip>
+    </widget>
+  </widget>
+  <widget type="xyplot" version="2.0.0">
+    <name>Fishtank Heater Plot</name>
+    <x>18</x>
+    <y>378</y>
+    <width>763</width>
+    <height>307</height>
+    <background_color>
+      <color red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <title>Fishtank Heater Plot</title>
+    <title_font>
+      <font family="Sans" style="BOLD" size="10.891089108910892">
+      </font>
+    </title_font>
+    <actions>
+    </actions>
+    <tooltip></tooltip>
+    <x_axis>
+      <title>Time (s)</title>
+      <autoscale>true</autoscale>
+      <log_scale>false</log_scale>
+      <minimum>0.0</minimum>
+      <maximum>100.0</maximum>
+      <show_grid>true</show_grid>
+      <title_font>
+        <font family="Arial" style="BOLD" size="8.910891089108912">
+        </font>
+      </title_font>
+      <scale_font>
+        <font name="Default" family="Liberation Sans" style="REGULAR" size="14.0">
+        </font>
+      </scale_font>
+      <visible>true</visible>
+    </x_axis>
+    <y_axes>
+      <y_axis>
+        <title>Temperature (C)</title>
+        <autoscale>false</autoscale>
+        <log_scale>false</log_scale>
+        <minimum>0.0</minimum>
+        <maximum>100.0</maximum>
+        <show_grid>true</show_grid>
+        <title_font>
+          <font family="Arial" style="BOLD" size="8.910891089108912">
+          </font>
+        </title_font>
+        <scale_font>
+          <font name="Default" family="Liberation Sans" style="REGULAR" size="14.0">
+          </font>
+        </scale_font>
+        <visible>true</visible>
+      </y_axis>
+      <y_axis>
+        <title>Heater Output (W)</title>
+        <autoscale>true</autoscale>
+        <log_scale>false</log_scale>
+        <minimum>0.0</minimum>
+        <maximum>120.0</maximum>
+        <show_grid>false</show_grid>
+        <title_font>
+          <font family="Arial" style="BOLD" size="8.910891089108912">
+          </font>
+        </title_font>
+        <scale_font>
+          <font name="Default" family="Liberation Sans" style="REGULAR" size="14.0">
+          </font>
+        </scale_font>
+        <visible>true</visible>
+      </y_axis>
+    </y_axes>
+    <traces>
+      <trace>
+        <name>$(traces[0].y_pv)</name>
+        <x_pv></x_pv>
+        <y_pv>TST{Tank:$(Num)}T-Sp</y_pv>
+        <err_pv></err_pv>
+        <axis>0</axis>
+        <trace_type>1</trace_type>
+        <color>
+          <color red="21" green="21" blue="196">
+          </color>
+        </color>
+        <line_width>1</line_width>
+        <point_type>0</point_type>
+        <point_size>4</point_size>
+      </trace>
+      <trace>
+        <name>$(traces[1].y_pv)</name>
+        <x_pv></x_pv>
+        <y_pv>TST{Tank:$(Num)}T-I</y_pv>
+        <err_pv></err_pv>
+        <axis>0</axis>
+        <trace_type>1</trace_type>
+        <color>
+          <color red="191" green="21" blue="21">
+          </color>
+        </color>
+        <line_width>1</line_width>
+        <point_type>0</point_type>
+        <point_size>4</point_size>
+      </trace>
+      <trace>
+        <name>$(traces[2].y_pv)</name>
+        <x_pv></x_pv>
+        <y_pv>TST{Htr:$(Num)}Output-I</y_pv>
+        <err_pv></err_pv>
+        <axis>1</axis>
+        <trace_type>1</trace_type>
+        <color>
+          <color red="33" green="179" blue="33">
+          </color>
+        </color>
+        <line_width>1</line_width>
+        <point_type>0</point_type>
+        <point_size>4</point_size>
+      </trace>
+      <trace>
+        <name>$(traces[3].y_pv)</name>
+        <x_pv></x_pv>
+        <y_pv>TST{Room:$(Num)}T-Sp</y_pv>
+        <err_pv></err_pv>
+        <axis>0</axis>
+        <trace_type>1</trace_type>
+        <color>
+          <color name="Minor" red="255" green="128" blue="0">
+          </color>
+        </color>
+        <line_width>1</line_width>
+        <point_type>0</point_type>
+        <point_size>4</point_size>
+      </trace>
+    </traces>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>Water Tank Temp</name>
+    <x>174</x>
+    <y>66</y>
+    <width>337</width>
+    <height>295</height>
+    <style>1</style>
+    <font>
+      <font family="Sans" style="BOLD" size="10.891089108910892">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="3" green="116" blue="176">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <actions>
+    </actions>
+    <widget type="rectangle" version="2.0.0">
+      <name>Rounded Rectangle</name>
+      <x>198</x>
+      <y>144</y>
+      <width>127</width>
+      <height>115</height>
+      <line_width>0</line_width>
+      <line_color>
+        <color red="128" green="0" blue="255">
+        </color>
+      </line_color>
+      <transparent>true</transparent>
+      <corner_width>16</corner_width>
+      <corner_height>16</corner_height>
+      <actions>
+      </actions>
+      <tooltip>$(pv_name)
+$(pv_value)</tooltip>
+    </widget>
+    <widget type="knob" version="2.0.0">
+      <name>Knob</name>
+      <pv_name>TST{Tank:$(Num)}T-Sp</pv_name>
+      <x>108</x>
+      <y>6</y>
+      <width>121</width>
+      <height>121</height>
+      <background_color>
+        <color red="240" green="240" blue="240">
+        </color>
+      </background_color>
+      <color>
+        <color red="150" green="150" blue="150">
+        </color>
+      </color>
+      <level_lolo>-50.0</level_lolo>
+      <level_low>10.0</level_low>
+      <thumb_color>
+        <color red="127" green="127" blue="127">
+        </color>
+      </thumb_color>
+      <actions>
+      </actions>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <limits_from_pv>false</limits_from_pv>
+    </widget>
+    <widget type="scrollbar" version="2.0.0">
+      <name>Scrollbar</name>
+      <pv_name>TST{Tank:$(Num)}T-Sp</pv_name>
+      <x>18</x>
+      <y>72</y>
+      <width>97</width>
+      <height>25</height>
+      <actions>
+      </actions>
+      <limits_from_pv>true</limits_from_pv>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_28</name>
+      <text>Setpoint</text>
+      <x>6</x>
+      <y>9</y>
+      <width>139</width>
+      <height>19</height>
+      <font>
+        <font family="Sans" style="BOLD" size="8.910891089108912">
+        </font>
+      </font>
+      <background_color>
+        <color name="GlobalBG" red="240" green="240" blue="240">
+        </color>
+      </background_color>
+      <transparent>false</transparent>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="spinner" version="2.0.0">
+      <name>Spinner</name>
+      <pv_name>TST{Tank:$(Num)}T-Sp</pv_name>
+      <x>18</x>
+      <y>36</y>
+      <width>97</width>
+      <height>25</height>
+      <format>0</format>
+      <precision>3</precision>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <actions>
+      </actions>
+      <minimum>-Infinity</minimum>
+      <maximum>Infinity</maximum>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_1</name>
+      <text>Readback</text>
+      <x>6</x>
+      <y>120</y>
+      <width>139</width>
+      <height>19</height>
+      <font>
+        <font family="Sans" style="BOLD" size="8.910891089108912">
+        </font>
+      </font>
+      <background_color>
+        <color name="GlobalBG" red="240" green="240" blue="240">
+        </color>
+      </background_color>
+      <transparent>false</transparent>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_3</name>
+      <pv_name>TST{Tank:$(Num)}T-I</pv_name>
+      <x>18</x>
+      <y>228</y>
+      <width>72</width>
+      <height>25</height>
+      <font>
+        <font family="Sans" style="REGULAR" size="8.910891089108912">
+        </font>
+      </font>
+      <background_color>
+        <color name="White" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="tank" version="2.0.0">
+      <name>Tank</name>
+      <pv_name>TST{Tank:$(Num)}T-I</pv_name>
+      <x>102</x>
+      <y>150</y>
+      <width>50</width>
+      <height>115</height>
+      <actions>
+      </actions>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="radio" version="2.0.0">
+      <name>Choice Button</name>
+      <pv_name>TST{Sensor:$(Num)}Sts</pv_name>
+      <x>210</x>
+      <y>186</y>
+      <width>102</width>
+      <height>25</height>
+      <font>
+        <font family="Sans" style="REGULAR" size="8.910891089108912">
+        </font>
+      </font>
+      <actions>
+      </actions>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <items>
+        <item>Item 1</item>
+        <item>Item 2</item>
+      </items>
+    </widget>
+    <widget type="combo" version="2.0.0">
+      <name>Menu Button</name>
+      <pv_name>TST{Sensor:$(Num)}Sts</pv_name>
+      <x>240</x>
+      <y>222</y>
+      <width>72</width>
+      <height>25</height>
+      <font>
+        <font family="Sans" style="REGULAR" size="8.910891089108912">
+        </font>
+      </font>
+      <background_color>
+        <color red="240" green="240" blue="240">
+        </color>
+      </background_color>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="polyline" version="2.0.0">
+      <name>Polyline</name>
+      <y>114</y>
+      <width>337</width>
+      <height>1</height>
+      <line_width>1</line_width>
+      <line_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </line_color>
+      <points>
+        <point x="0.0" y="0.0">
+        </point>
+        <point x="336.0" y="0.0">
+        </point>
+        <point x="336.0" y="0.0">
+        </point>
+      </points>
+      <actions>
+      </actions>
+      <tooltip>$(pv_name)
+$(pv_value)</tooltip>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_1</name>
+      <text>Sensor</text>
+      <x>210</x>
+      <y>156</y>
+      <width>67</width>
+      <height>19</height>
+      <font>
+        <font family="Sans" style="BOLD" size="10.891089108910892">
+        </font>
+      </font>
+      <background_color>
+        <color name="GlobalBG" red="240" green="240" blue="240">
+        </color>
+      </background_color>
+      <transparent>false</transparent>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LED</name>
+      <pv_name>TST{Sensor:$(Num)}Sts</pv_name>
+      <x>210</x>
+      <y>222</y>
+      <width>25</width>
+      <height>25</height>
+      <off_color>
+        <color name="On" red="0" green="255" blue="0">
+        </color>
+      </off_color>
+      <on_color>
+        <color name="Major" red="255" green="0" blue="0">
+        </color>
+      </on_color>
+      <foreground_color>
+        <color red="192" green="192" blue="192">
+        </color>
+      </foreground_color>
+      <actions>
+      </actions>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_2</name>
+      <pv_name>TST{Tank:$(Num)}T-Sp.EGU</pv_name>
+      <x>78</x>
+      <y>36</y>
+      <width>19</width>
+      <height>25</height>
+      <font>
+        <font family="Sans" style="REGULAR" size="10.891089108910892">
+        </font>
+      </font>
+      <background_color>
+        <color name="GlobalBG" red="240" green="240" blue="240">
+        </color>
+      </background_color>
+      <transparent>true</transparent>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_3</name>
+      <pv_name>TST{Tank:$(Num)}T-Sp</pv_name>
+      <x>18</x>
+      <y>168</y>
+      <width>73</width>
+      <height>25</height>
+      <font>
+        <font family="Sans" style="REGULAR" size="8.910891089108912">
+        </font>
+      </font>
+      <background_color>
+        <color name="White" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_28</name>
+      <text>Command</text>
+      <x>18</x>
+      <y>144</y>
+      <width>79</width>
+      <height>19</height>
+      <font>
+        <font family="Sans" style="REGULAR" size="8.910891089108912">
+        </font>
+      </font>
+      <background_color>
+        <color name="GlobalBG" red="240" green="240" blue="240">
+        </color>
+      </background_color>
+      <transparent>false</transparent>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_29</name>
+      <text>Actual</text>
+      <x>18</x>
+      <y>204</y>
+      <width>79</width>
+      <height>19</height>
+      <font>
+        <font family="Sans" style="REGULAR" size="8.910891089108912">
+        </font>
+      </font>
+      <background_color>
+        <color name="GlobalBG" red="240" green="240" blue="240">
+        </color>
+      </background_color>
+      <transparent>false</transparent>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>Heater Control</name>
+    <x>528</x>
+    <y>66</y>
+    <width>253</width>
+    <height>295</height>
+    <style>1</style>
+    <font>
+      <font family="Sans" style="BOLD" size="10.891089108910892">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="3" green="116" blue="176">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <actions>
+    </actions>
+    <widget type="label" version="2.0.0">
+      <name>Label_28</name>
+      <text>Setpoint</text>
+      <x>6</x>
+      <y>42</y>
+      <width>121</width>
+      <height>19</height>
+      <font>
+        <font family="Sans" style="BOLD" size="8.910891089108912">
+        </font>
+      </font>
+      <background_color>
+        <color name="GlobalBG" red="240" green="240" blue="240">
+        </color>
+      </background_color>
+      <transparent>false</transparent>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_28</name>
+      <text>Readback</text>
+      <x>6</x>
+      <y>108</y>
+      <width>121</width>
+      <height>19</height>
+      <font>
+        <font family="Sans" style="BOLD" size="8.910891089108912">
+        </font>
+      </font>
+      <background_color>
+        <color name="GlobalBG" red="240" green="240" blue="240">
+        </color>
+      </background_color>
+      <transparent>false</transparent>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_3</name>
+      <pv_name>TST{Htr:$(Num)}V-Sp</pv_name>
+      <x>18</x>
+      <y>156</y>
+      <width>108</width>
+      <height>25</height>
+      <font>
+        <font family="Sans" style="REGULAR" size="8.910891089108912">
+        </font>
+      </font>
+      <background_color>
+        <color name="White" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>Text Input</name>
+      <pv_name>TST{Htr:$(Num)}V-Sp</pv_name>
+      <x>18</x>
+      <y>66</y>
+      <width>91</width>
+      <height>25</height>
+      <font>
+        <font family="Sans" style="REGULAR" size="8.910891089108912">
+        </font>
+      </font>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <actions>
+      </actions>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="polyline" version="2.0.0">
+      <name>Polyline</name>
+      <y>102</y>
+      <width>253</width>
+      <height>1</height>
+      <line_width>1</line_width>
+      <line_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </line_color>
+      <points>
+        <point x="0.0" y="0.0">
+        </point>
+        <point x="137.0" y="0.0">
+        </point>
+        <point x="252.0" y="0.0">
+        </point>
+      </points>
+      <actions>
+      </actions>
+      <tooltip>$(pv_name)
+$(pv_value)</tooltip>
+    </widget>
+    <widget type="multi_state_led" version="2.0.0">
+      <name>LED</name>
+      <pv_name>TST{Htr:$(Num)}Pwr-Cmd</pv_name>
+      <x>12</x>
+      <y>8</y>
+      <width>25</width>
+      <height>25</height>
+      <foreground_color>
+        <color red="192" green="192" blue="192">
+        </color>
+      </foreground_color>
+      <actions>
+      </actions>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <states>
+        <state>
+          <value>0</value>
+          <label></label>
+          <color>
+            <color name="On" red="0" green="255" blue="0">
+            </color>
+          </color>
+        </state>
+        <state>
+          <value>1</value>
+          <label></label>
+          <color>
+            <color name="Off" red="60" green="100" blue="60">
+            </color>
+          </color>
+        </state>
+        <state>
+          <value>2</value>
+          <label></label>
+          <color>
+            <color name="Minor" red="255" green="128" blue="0">
+            </color>
+          </color>
+        </state>
+        <state>
+          <value>3</value>
+          <label></label>
+          <color>
+            <color name="Major" red="255" green="0" blue="0">
+            </color>
+          </color>
+        </state>
+      </states>
+      <fallback_label>ERR</fallback_label>
+      <fallback_color>
+        <color red="100" green="100" blue="100">
+        </color>
+      </fallback_color>
+    </widget>
+    <widget type="scaledslider" version="2.0.0">
+      <name>Scaled Slider</name>
+      <pv_name>TST{Htr:$(Num)}V-Sp</pv_name>
+      <x>120</x>
+      <y>12</y>
+      <width>121</width>
+      <height>85</height>
+      <background_color>
+        <color red="240" green="240" blue="240">
+        </color>
+      </background_color>
+      <major_tick_step_hint>50</major_tick_step_hint>
+      <scale_format></scale_format>
+      <show_hihi>false</show_hihi>
+      <show_high>false</show_high>
+      <show_low>false</show_low>
+      <show_lolo>false</show_lolo>
+      <actions>
+      </actions>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <maximum>110.0</maximum>
+      <limits_from_pv>false</limits_from_pv>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_1</name>
+      <pv_name>TST{Htr:$(Num)}Output-I</pv_name>
+      <x>132</x>
+      <y>156</y>
+      <width>108</width>
+      <height>25</height>
+      <font>
+        <font family="Sans" style="REGULAR" size="8.910891089108912">
+        </font>
+      </font>
+      <background_color>
+        <color name="White" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_28</name>
+      <text>Voltage</text>
+      <x>18</x>
+      <y>132</y>
+      <width>79</width>
+      <height>19</height>
+      <font>
+        <font family="Sans" style="REGULAR" size="8.910891089108912">
+        </font>
+      </font>
+      <background_color>
+        <color name="GlobalBG" red="240" green="240" blue="240">
+        </color>
+      </background_color>
+      <transparent>false</transparent>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_29</name>
+      <text>Output</text>
+      <x>132</x>
+      <y>132</y>
+      <width>79</width>
+      <height>19</height>
+      <font>
+        <font family="Sans" style="REGULAR" size="8.910891089108912">
+        </font>
+      </font>
+      <background_color>
+        <color name="GlobalBG" red="240" green="240" blue="240">
+        </color>
+      </background_color>
+      <transparent>false</transparent>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="polyline" version="2.0.0">
+      <name>Polyline_1</name>
+      <y>189</y>
+      <width>253</width>
+      <height>1</height>
+      <line_width>1</line_width>
+      <line_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </line_color>
+      <points>
+        <point x="0.0" y="0.0">
+        </point>
+        <point x="137.0" y="0.0">
+        </point>
+        <point x="252.0" y="0.0">
+        </point>
+      </points>
+      <actions>
+      </actions>
+      <tooltip>$(pv_name)
+$(pv_value)</tooltip>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_31</name>
+      <text>PID</text>
+      <x>6</x>
+      <y>201</y>
+      <width>43</width>
+      <height>19</height>
+      <font>
+        <font family="Sans" style="BOLD" size="8.910891089108912">
+        </font>
+      </font>
+      <background_color>
+        <color name="GlobalBG" red="240" green="240" blue="240">
+        </color>
+      </background_color>
+      <transparent>false</transparent>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="radio" version="2.0.0">
+      <name>Choice Button</name>
+      <pv_name>TST{Htr:$(Num)}V-Sp.OMSL</pv_name>
+      <x>48</x>
+      <y>201</y>
+      <width>194</width>
+      <height>19</height>
+      <actions>
+      </actions>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <items>
+        <item>Item 1</item>
+        <item>Item 2</item>
+      </items>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_32</name>
+      <text>Prop. Gain</text>
+      <x>24</x>
+      <y>228</y>
+      <width>67</width>
+      <height>19</height>
+      <font>
+        <font family="Sans" style="REGULAR" size="8.910891089108912">
+        </font>
+      </font>
+      <background_color>
+        <color name="GlobalBG" red="240" green="240" blue="240">
+        </color>
+      </background_color>
+      <transparent>false</transparent>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_33</name>
+      <text>Int. Gain</text>
+      <x>96</x>
+      <y>228</y>
+      <width>67</width>
+      <height>19</height>
+      <font>
+        <font family="Sans" style="REGULAR" size="8.910891089108912">
+        </font>
+      </font>
+      <background_color>
+        <color name="GlobalBG" red="240" green="240" blue="240">
+        </color>
+      </background_color>
+      <transparent>false</transparent>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>Text Input</name>
+      <pv_name>TST{Tank:$(Num)}T-PID.A</pv_name>
+      <x>24</x>
+      <y>246</y>
+      <width>67</width>
+      <height>19</height>
+      <font>
+        <font family="Sans" style="REGULAR" size="8.910891089108912">
+        </font>
+      </font>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <actions>
+      </actions>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_34</name>
+      <text>Error</text>
+      <x>168</x>
+      <y>228</y>
+      <width>67</width>
+      <height>19</height>
+      <font>
+        <font family="Sans" style="REGULAR" size="8.910891089108912">
+        </font>
+      </font>
+      <background_color>
+        <color name="GlobalBG" red="240" green="240" blue="240">
+        </color>
+      </background_color>
+      <transparent>false</transparent>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_4</name>
+      <pv_name>TST{Tank:$(Num)}T-Err</pv_name>
+      <x>168</x>
+      <y>246</y>
+      <width>67</width>
+      <height>19</height>
+      <font>
+        <font family="Sans" style="REGULAR" size="8.910891089108912">
+        </font>
+      </font>
+      <background_color>
+        <color name="White" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>Text Input_8</name>
+      <pv_name>TST{Tank:$(Num)}T-PID.C</pv_name>
+      <x>96</x>
+      <y>246</y>
+      <width>67</width>
+      <height>19</height>
+      <font>
+        <font family="Sans" style="REGULAR" size="8.910891089108912">
+        </font>
+      </font>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <actions>
+      </actions>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="radio" version="2.0.0">
+      <name>Choice Button</name>
+      <pv_name>TST{Htr:$(Num)}Pwr-Cmd</pv_name>
+      <x>48</x>
+      <y>6</y>
+      <width>193</width>
+      <height>25</height>
+      <font>
+        <font family="Sans" style="REGULAR" size="8.910891089108912">
+        </font>
+      </font>
+      <actions>
+      </actions>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <items>
+        <item>Item 1</item>
+        <item>Item 2</item>
+      </items>
+    </widget>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button</name>
+    <actions>
+      <action type="open_display">
+        <file>demoHeaterHistory.opi</file>
+        <target>replace</target>
+        <description>Open Page with Data Browser</description>
+      </action>
+    </actions>
+    <x>564</x>
+    <y>702</y>
+    <width>205</width>
+    <height>25</height>
+    <background_color>
+      <color red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+</display>

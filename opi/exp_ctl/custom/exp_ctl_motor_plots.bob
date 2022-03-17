@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<display version="2.0.0">
+  <name>Display</name>
+  <widget type="databrowser" version="2.0.0">
+    <name>Motor plots</name>
+    <file>exp_ctl_motors.plt</file>
+    <x>20</x>
+    <y>30</y>
+    <width>430</width>
+    <height>510</height>
+  </widget>
+</display>

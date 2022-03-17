@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<display version="2.0.0">
+  <background_color>
+    <color red="240" green="240" blue="240">
+    </color>
+  </background_color>
+  <actions>
+  </actions>
+  <widget type="rectangle" version="2.0.0">
+    <name>Rectangle</name>
+    <width>800</width>
+    <height>48</height>
+    <line_width>0</line_width>
+    <line_color>
+      <color red="128" green="0" blue="255">
+      </color>
+    </line_color>
+    <actions>
+    </actions>
+    <tooltip>$(pv_name)
+$(pv_value)</tooltip>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>Experiment control launcher</text>
+    <width>800</width>
+    <height>48</height>
+    <font>
+      <font name="Header 2" family="Liberation Sans" style="BOLD" size="18.0">
+      </font>
+    </font>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>Motors</name>
+    <x>50</x>
+    <y>90</y>
+    <width>130</width>
+    <height>230</height>
+    <style>1</style>
+    <foreground_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <actions>
+    </actions>
+    <widget type="action_button" version="3.0.0">
+      <name>Action Button_9</name>
+      <actions>
+        <action type="open_display">
+          <file>common-displays/external/motor_all.opi</file>
+          <macros>
+            <Dev>{Tbl-Ax:X1}</Dev>
+            <Mtr>Mtr</Mtr>
+            <Sys>XF:31IDA-OP</Sys>
+          </macros>
+          <target>tab</target>
+        </action>
+      </actions>
+      <text>Motor 1</text>
+      <x>12</x>
+      <y>12</y>
+      <height>24</height>
+      <background_color>
+        <color red="240" green="240" blue="240">
+        </color>
+      </background_color>
+      <tooltip>$(actions)</tooltip>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>Action Button_14</name>
+      <actions>
+        <action type="open_display">
+          <file>common-displays/external/motor_all.opi</file>
+          <macros>
+            <Dev>{Tbl-Ax:X2}</Dev>
+            <Mtr>Mtr</Mtr>
+            <Sys>XF:31IDA-OP</Sys>
+          </macros>
+          <target>tab</target>
+        </action>
+      </actions>
+      <text>Motor 2</text>
+      <x>12</x>
+      <y>51</y>
+      <height>24</height>
+      <background_color>
+        <color red="240" green="240" blue="240">
+        </color>
+      </background_color>
+      <tooltip>$(actions)</tooltip>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>Action Button_15</name>
+      <actions>
+        <action type="open_display">
+          <file>exp_ctl/custom/exp_ctl_motor_plots.bob</file>
+          <target>tab</target>
+        </action>
+      </actions>
+      <text>Plots</text>
+      <x>12</x>
+      <y>91</y>
+      <height>24</height>
+      <background_color>
+        <color red="240" green="240" blue="240">
+        </color>
+      </background_color>
+      <tooltip>$(actions)</tooltip>
+    </widget>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>Scan</name>
+    <x>197</x>
+    <y>90</y>
+    <width>128</width>
+    <height>229</height>
+    <style>1</style>
+    <foreground_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <actions>
+    </actions>
+    <widget type="action_button" version="3.0.0">
+      <name>Menu Button</name>
+      <actions>
+        <action type="open_display">
+          <file>common-displays/modules/scan_full.opi</file>
+          <macros>
+            <N>1</N>
+            <P>Test:</P>
+            <S>scan1</S>
+          </macros>
+          <target>tab</target>
+          <description>Scan 1</description>
+        </action>
+        <action type="open_display">
+          <file>common-displays/modules/scan_full.opi</file>
+          <macros>
+            <N>2</N>
+            <P>Test:</P>
+            <S>scan2</S>
+          </macros>
+          <target>tab</target>
+          <description>Scan 2</description>
+        </action>
+        <action type="open_display">
+          <file>common-displays/modules/scan_full.opi</file>
+          <macros>
+            <N>3</N>
+            <P>Test:</P>
+            <S>scan3</S>
+          </macros>
+          <target>tab</target>
+          <description>Scan 3</description>
+        </action>
+        <action type="open_display">
+          <file>common-displays/modules/scan_full.opi</file>
+          <macros>
+            <N>4</N>
+            <P>Test:</P>
+            <S>scan4</S>
+          </macros>
+          <target>tab</target>
+          <description>Scan 4</description>
+        </action>
+      </actions>
+      <text>Scan</text>
+      <x>12</x>
+      <y>12</y>
+      <height>24</height>
+      <background_color>
+        <color red="240" green="240" blue="240">
+        </color>
+      </background_color>
+      <tooltip>$(actions)</tooltip>
+    </widget>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>Area detector</name>
+    <x>340</x>
+    <y>90</y>
+    <width>163</width>
+    <height>229</height>
+    <style>1</style>
+    <foreground_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <actions>
+    </actions>
+    <widget type="action_button" version="3.0.0">
+      <name>Action Button_2</name>
+      <actions>
+        <action type="open_display">
+          <file>common-displays/modules/ADBase.opi</file>
+          <macros>
+            <P>testcam:</P>
+            <R>cam1:</R>
+          </macros>
+          <target>tab</target>
+        </action>
+      </actions>
+      <text>Control (ADSim)</text>
+      <x>12</x>
+      <y>12</y>
+      <width>133</width>
+      <height>24</height>
+      <background_color>
+        <color red="240" green="240" blue="240">
+        </color>
+      </background_color>
+      <tooltip>$(actions)</tooltip>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>Action Button_6</name>
+      <actions>
+        <action type="open_display">
+          <file>common-displays/external/pva_image.bob</file>
+          <macros>
+            <Dev>:</Dev>
+            <Image>Image</Image>
+            <Pva>Pva1:</Pva>
+            <Sys>testcam</Sys>
+          </macros>
+          <target>tab</target>
+        </action>
+      </actions>
+      <text>AD image (PVA)</text>
+      <x>12</x>
+      <y>51</y>
+      <width>133</width>
+      <height>24</height>
+      <background_color>
+        <color red="240" green="240" blue="240">
+        </color>
+      </background_color>
+      <tooltip>$(actions)</tooltip>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>Action Button_10</name>
+      <actions>
+        <action type="open_display">
+          <file>common-displays/modules/simDetectorSetup.opi</file>
+          <macros>
+            <P>testcam:</P>
+            <R>cam1:</R>
+          </macros>
+          <target>tab</target>
+        </action>
+      </actions>
+      <text>simDetector setup</text>
+      <x>12</x>
+      <y>91</y>
+      <width>133</width>
+      <height>24</height>
+      <background_color>
+        <color red="240" green="240" blue="240">
+        </color>
+      </background_color>
+      <tooltip>$(actions)</tooltip>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>Action Button_11</name>
+      <actions>
+        <action type="open_display">
+          <file>common-displays/modules/URLDriver.opi</file>
+          <macros>
+            <P>testcam:</P>
+            <R>cam1:</R>
+          </macros>
+          <target>tab</target>
+        </action>
+      </actions>
+      <text>Control (ADURL)</text>
+      <x>12</x>
+      <y>131</y>
+      <width>133</width>
+      <height>24</height>
+      <background_color>
+        <color red="240" green="240" blue="240">
+        </color>
+      </background_color>
+      <tooltip>$(actions)</tooltip>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>Action Button_13</name>
+      <actions>
+        <action type="open_display">
+          <file>common-displays/external/pva_image.bob</file>
+          <macros>
+            <Dev>:</Dev>
+            <Image>Image</Image>
+            <Pva>Pva1:</Pva>
+            <Sys>testcam</Sys>
+          </macros>
+          <target>tab</target>
+        </action>
+      </actions>
+      <text>URL image (PVA)</text>
+      <x>12</x>
+      <y>171</y>
+      <width>133</width>
+      <height>24</height>
+      <background_color>
+        <color red="240" green="240" blue="240">
+        </color>
+      </background_color>
+      <tooltip>$(actions)</tooltip>
+    </widget>
+  </widget>
+</display>

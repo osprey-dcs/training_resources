@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<display typeId="org.csstudio.opibuilder.Display" version="1.0.0">
+  <show_close_button>true</show_close_button>
+  <rules />
+  <wuid>520433fd:147ceff9d21:-673b</wuid>
+  <show_grid>true</show_grid>
+  <auto_zoom_to_fit_all>false</auto_zoom_to_fit_all>
+  <scripts />
+  <height>1200</height>
+  <macros>
+    <include_parent_macros>true</include_parent_macros>
+  </macros>
+  <boy_version>4.0.103.201508281950</boy_version>
+  <show_edit_range>true</show_edit_range>
+  <widget_type>Display</widget_type>
+  <auto_scale_widgets>
+    <auto_scale_widgets>false</auto_scale_widgets>
+    <min_width>-1</min_width>
+    <min_height>-1</min_height>
+  </auto_scale_widgets>
+  <background_color>
+    <color red="240" green="240" blue="240" />
+  </background_color>
+  <width>525</width>
+  <x>-1</x>
+  <name></name>
+  <grid_space>6</grid_space>
+  <show_ruler>true</show_ruler>
+  <y>-1</y>
+  <snap_to_geometry>true</snap_to_geometry>
+  <foreground_color>
+    <color red="192" green="192" blue="192" />
+  </foreground_color>
+  <actions hook="false" hook_all="false" />
+  <widget typeId="org.csstudio.opibuilder.widgets.linkingContainer" version="1.0.0">
+    <opi_file>motor_drive.opi</opi_file>
+    <border_style>12</border_style>
+    <tooltip></tooltip>
+    <rules />
+    <enabled>true</enabled>
+    <wuid>520433fd:147ceff9d21:-6712</wuid>
+    <scripts />
+    <height>265</height>
+    <border_width>1</border_width>
+    <scale_options>
+      <width_scalable>true</width_scalable>
+      <height_scalable>true</height_scalable>
+      <keep_wh_ratio>false</keep_wh_ratio>
+    </scale_options>
+    <macros>
+      <include_parent_macros>true</include_parent_macros>
+    </macros>
+    <resize_behaviour>0</resize_behaviour>
+    <visible>true</visible>
+    <group_name></group_name>
+    <border_color>
+      <color red="0" green="128" blue="255" />
+    </border_color>
+    <widget_type>Linking Container</widget_type>
+    <background_color>
+      <color red="240" green="240" blue="240" />
+    </background_color>
+    <width>511</width>
+    <x>6</x>
+    <name>Drive</name>
+    <y>120</y>
+    <foreground_color>
+      <color red="192" green="192" blue="192" />
+    </foreground_color>
+    <actions hook="false" hook_all="false" />
+    <font>
+      <opifont.name fontName="Sans" height="10" style="0">Default</opifont.name>
+    </font>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.linkingContainer" version="1.0.0">
+    <opi_file>motor_calibration.opi</opi_file>
+    <border_style>12</border_style>
+    <tooltip></tooltip>
+    <rules />
+    <enabled>true</enabled>
+    <wuid>-6d9b3a03:147df4f0392:-7b61</wuid>
+    <scripts />
+    <height>67</height>
+    <border_width>1</border_width>
+    <scale_options>
+      <width_scalable>true</width_scalable>
+      <height_scalable>true</height_scalable>
+      <keep_wh_ratio>false</keep_wh_ratio>
+    </scale_options>
+    <macros>
+      <include_parent_macros>true</include_parent_macros>
+    </macros>
+    <resize_behaviour>2</resize_behaviour>
+    <visible>true</visible>
+    <group_name></group_name>
+    <border_color>
+      <color red="0" green="128" blue="255" />
+    </border_color>
+    <widget_type>Linking Container</widget_type>
+    <background_color>
+      <color red="240" green="240" blue="240" />
+    </background_color>
+    <width>511</width>
+    <x>7</x>
+    <name>Calibration</name>
+    <y>390</y>
+    <foreground_color>
+      <color red="192" green="192" blue="192" />
+    </foreground_color>
+    <actions hook="false" hook_all="false" />
+    <font>
+      <opifont.name fontName="Sans" height="10" style="0">Default</opifont.name>
+    </font>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.linkingContainer" version="1.0.0">
+    <opi_file>motor_dynamics.opi</opi_file>
+    <border_style>12</border_style>
+    <tooltip></tooltip>
+    <rules />
+    <enabled>true</enabled>
+    <wuid>-6d9b3a03:147df4f0392:-7779</wuid>
+    <scripts />
+    <height>241</height>
+    <border_width>1</border_width>
+    <scale_options>
+      <width_scalable>true</width_scalable>
+      <height_scalable>true</height_scalable>
+      <keep_wh_ratio>false</keep_wh_ratio>
+    </scale_options>
+    <macros>
+      <include_parent_macros>true</include_parent_macros>
+    </macros>
+    <resize_behaviour>0</resize_behaviour>
+    <visible>true</visible>
+    <group_name></group_name>
+    <border_color>
+      <color red="0" green="128" blue="255" />
+    </border_color>
+    <widget_type>Linking Container</widget_type>
+    <background_color>
+      <color red="240" green="240" blue="240" />
+    </background_color>
+    <width>511</width>
+    <x>7</x>
+    <name>Dynamics</name>
+    <y>462</y>
+    <foreground_color>
+      <color red="192" green="192" blue="192" />
+    </foreground_color>
+    <actions hook="false" hook_all="false" />
+    <font>
+      <opifont.name fontName="Sans" height="10" style="0">Default</opifont.name>
+    </font>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.linkingContainer" version="1.0.0">
+    <opi_file>motor_status.opi</opi_file>
+    <border_style>12</border_style>
+    <tooltip></tooltip>
+    <rules />
+    <enabled>true</enabled>
+    <wuid>-6d9b3a03:147df4f0392:-767d</wuid>
+    <scripts />
+    <height>79</height>
+    <border_width>1</border_width>
+    <scale_options>
+      <width_scalable>true</width_scalable>
+      <height_scalable>true</height_scalable>
+      <keep_wh_ratio>false</keep_wh_ratio>
+    </scale_options>
+    <macros>
+      <include_parent_macros>true</include_parent_macros>
+    </macros>
+    <resize_behaviour>0</resize_behaviour>
+    <visible>true</visible>
+    <group_name></group_name>
+    <border_color>
+      <color red="0" green="128" blue="255" />
+    </border_color>
+    <widget_type>Linking Container</widget_type>
+    <background_color>
+      <color red="240" green="240" blue="240" />
+    </background_color>
+    <width>511</width>
+    <x>6</x>
+    <name>Status</name>
+    <y>36</y>
+    <foreground_color>
+      <color red="192" green="192" blue="192" />
+    </foreground_color>
+    <actions hook="false" hook_all="false" />
+    <font>
+      <opifont.name fontName="Sans" height="10" style="0">Default</opifont.name>
+    </font>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <border_style>0</border_style>
+    <tooltip></tooltip>
+    <horizontal_alignment>1</horizontal_alignment>
+    <rules />
+    <enabled>true</enabled>
+    <wuid>-72efcfbe:147e042ab79:-7dbb</wuid>
+    <transparent>false</transparent>
+    <auto_size>false</auto_size>
+    <text>$(Sys)$(Dev)$(Mtr)</text>
+    <scripts />
+    <height>30</height>
+    <border_width>1</border_width>
+    <scale_options>
+      <width_scalable>true</width_scalable>
+      <height_scalable>true</height_scalable>
+      <keep_wh_ratio>false</keep_wh_ratio>
+    </scale_options>
+    <visible>true</visible>
+    <vertical_alignment>1</vertical_alignment>
+    <border_color>
+      <color red="0" green="128" blue="255" />
+    </border_color>
+    <widget_type>Label</widget_type>
+    <wrap_words>true</wrap_words>
+    <background_color>
+      <color name="Title bar" red="0" green="127" blue="255" />
+    </background_color>
+    <width>525</width>
+    <x>0</x>
+    <name>Label</name>
+    <y>0</y>
+    <foreground_color>
+      <color red="255" green="255" blue="255" />
+    </foreground_color>
+    <actions hook="false" hook_all="false" />
+    <show_scrollbar>false</show_scrollbar>
+    <font>
+      <opifont.name fontName="Cantarell" height="11" style="1">Default Bold</opifont.name>
+    </font>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.linkingContainer" version="1.0.0">
+    <opi_file>motor_servo.opi</opi_file>
+    <border_style>12</border_style>
+    <tooltip></tooltip>
+    <rules />
+    <enabled>true</enabled>
+    <wuid>-72efcfbe:147e042ab79:-7c7d</wuid>
+    <scripts />
+    <height>91</height>
+    <border_width>1</border_width>
+    <scale_options>
+      <width_scalable>true</width_scalable>
+      <height_scalable>true</height_scalable>
+      <keep_wh_ratio>false</keep_wh_ratio>
+    </scale_options>
+    <macros>
+      <include_parent_macros>true</include_parent_macros>
+    </macros>
+    <resize_behaviour>0</resize_behaviour>
+    <visible>true</visible>
+    <group_name></group_name>
+    <border_color>
+      <color red="0" green="128" blue="255" />
+    </border_color>
+    <widget_type>Linking Container</widget_type>
+    <background_color>
+      <color red="240" green="240" blue="240" />
+    </background_color>
+    <width>511</width>
+    <x>7</x>
+    <name>Servo Parameters</name>
+    <y>708</y>
+    <foreground_color>
+      <color red="192" green="192" blue="192" />
+    </foreground_color>
+    <actions hook="false" hook_all="false" />
+    <font>
+      <opifont.name fontName="Sans" height="10" style="0">Default</opifont.name>
+    </font>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.linkingContainer" version="1.0.0">
+    <opi_file>motor_resolution.opi</opi_file>
+    <border_style>12</border_style>
+    <tooltip></tooltip>
+    <rules />
+    <enabled>true</enabled>
+    <wuid>-72efcfbe:147e042ab79:-7a4c</wuid>
+    <scripts />
+    <height>277</height>
+    <border_width>1</border_width>
+    <scale_options>
+      <width_scalable>true</width_scalable>
+      <height_scalable>true</height_scalable>
+      <keep_wh_ratio>false</keep_wh_ratio>
+    </scale_options>
+    <macros>
+      <include_parent_macros>true</include_parent_macros>
+    </macros>
+    <resize_behaviour>0</resize_behaviour>
+    <visible>true</visible>
+    <group_name></group_name>
+    <border_color>
+      <color red="0" green="128" blue="255" />
+    </border_color>
+    <widget_type>Linking Container</widget_type>
+    <background_color>
+      <color red="240" green="240" blue="240" />
+    </background_color>
+    <width>254</width>
+    <x>6</x>
+    <name>Resolution</name>
+    <y>804</y>
+    <foreground_color>
+      <color red="192" green="192" blue="192" />
+    </foreground_color>
+    <actions hook="false" hook_all="false" />
+    <font>
+      <opifont.name fontName="Sans" height="10" style="0">Default</opifont.name>
+    </font>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.linkingContainer" version="1.0.0">
+    <opi_file>motor_system_status.opi</opi_file>
+    <border_style>12</border_style>
+    <tooltip></tooltip>
+    <rules />
+    <enabled>true</enabled>
+    <wuid>-72efcfbe:147e042ab79:-7961</wuid>
+    <scripts />
+    <height>360</height>
+    <border_width>1</border_width>
+    <scale_options>
+      <width_scalable>true</width_scalable>
+      <height_scalable>true</height_scalable>
+      <keep_wh_ratio>false</keep_wh_ratio>
+    </scale_options>
+    <macros>
+      <include_parent_macros>true</include_parent_macros>
+    </macros>
+    <resize_behaviour>0</resize_behaviour>
+    <visible>true</visible>
+    <group_name></group_name>
+    <border_color>
+      <color red="0" green="128" blue="255" />
+    </border_color>
+    <widget_type>Linking Container</widget_type>
+    <background_color>
+      <color red="240" green="240" blue="240" />
+    </background_color>
+    <width>254</width>
+    <x>264</x>
+    <name>System Status</name>
+    <y>804</y>
+    <foreground_color>
+      <color red="192" green="192" blue="192" />
+    </foreground_color>
+    <actions hook="false" hook_all="false" />
+    <font>
+      <opifont.name fontName="Sans" height="10" style="0">Default</opifont.name>
+    </font>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.groupingContainer" version="1.0.0">
+    <border_style>12</border_style>
+    <tooltip></tooltip>
+    <rules />
+    <enabled>true</enabled>
+    <wuid>-143b4362:147e06408af:-6ec3</wuid>
+    <transparent>false</transparent>
+    <lock_children>false</lock_children>
+    <scripts />
+    <height>78</height>
+    <border_width>1</border_width>
+    <scale_options>
+      <width_scalable>true</width_scalable>
+      <height_scalable>true</height_scalable>
+      <keep_wh_ratio>false</keep_wh_ratio>
+    </scale_options>
+    <macros>
+      <include_parent_macros>true</include_parent_macros>
+    </macros>
+    <visible>true</visible>
+    <border_color>
+      <color red="0" green="128" blue="255" />
+    </border_color>
+    <widget_type>Grouping Container</widget_type>
+    <background_color>
+      <color red="240" green="240" blue="240" />
+    </background_color>
+    <width>253</width>
+    <x>7</x>
+    <name>PMAC Status</name>
+    <y>1086</y>
+    <foreground_color>
+      <color red="192" green="192" blue="192" />
+    </foreground_color>
+    <actions hook="false" hook_all="false" />
+    <fc>false</fc>
+    <show_scrollbar>true</show_scrollbar>
+    <font>
+      <opifont.name fontName="Sans" height="10" style="0">Default</opifont.name>
+    </font>
+    <widget typeId="org.csstudio.opibuilder.widgets.ActionButton" version="2.0.0">
+      <toggle_button>false</toggle_button>
+      <border_style>0</border_style>
+      <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
+      <tooltip>$(pv_name)
+$(pv_value)</tooltip>
+      <push_action_index>0</push_action_index>
+      <rules />
+      <enabled>true</enabled>
+      <wuid>-143b4362:147e06408af:-6e48</wuid>
+      <pv_value />
+      <text>Cntl. Status</text>
+      <scripts />
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <height>31</height>
+      <border_width>1</border_width>
+      <scale_options>
+        <width_scalable>true</width_scalable>
+        <height_scalable>true</height_scalable>
+        <keep_wh_ratio>false</keep_wh_ratio>
+      </scale_options>
+      <image></image>
+      <visible>true</visible>
+      <pv_name></pv_name>
+      <border_color>
+        <color red="0" green="128" blue="255" />
+      </border_color>
+      <widget_type>Action Button</widget_type>
+      <width>109</width>
+      <x>6</x>
+      <name>Action Button</name>
+      <y>12</y>
+      <style>1</style>
+      <foreground_color>
+        <color red="0" green="0" blue="0" />
+      </foreground_color>
+      <actions hook="false" hook_all="false">
+        <action type="OPEN_DISPLAY">
+          <path>pmacStatus.opi</path>
+          <macros>
+            <include_parent_macros>true</include_parent_macros>
+            <SYS>$(CntlSys)</SYS>
+            <DEV>$(CntlDev)</DEV>
+          </macros>
+          <replace>2</replace>
+          <description></description>
+        </action>
+      </actions>
+      <font>
+        <opifont.name fontName="Sans" height="10" style="0">Default</opifont.name>
+      </font>
+    </widget>
+    <widget typeId="org.csstudio.opibuilder.widgets.ActionButton" version="2.0.0">
+      <toggle_button>false</toggle_button>
+      <border_style>0</border_style>
+      <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
+      <tooltip>$(pv_name)
+$(pv_value)</tooltip>
+      <push_action_index>0</push_action_index>
+      <rules />
+      <enabled>true</enabled>
+      <wuid>-143b4362:147e06408af:-6e36</wuid>
+      <pv_value />
+      <text>Axis Status</text>
+      <scripts />
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <height>31</height>
+      <border_width>1</border_width>
+      <scale_options>
+        <width_scalable>true</width_scalable>
+        <height_scalable>true</height_scalable>
+        <keep_wh_ratio>false</keep_wh_ratio>
+      </scale_options>
+      <image></image>
+      <visible>true</visible>
+      <pv_name></pv_name>
+      <border_color>
+        <color red="0" green="128" blue="255" />
+      </border_color>
+      <widget_type>Action Button</widget_type>
+      <width>109</width>
+      <x>132</x>
+      <name>Action Button</name>
+      <y>12</y>
+      <style>1</style>
+      <foreground_color>
+        <color red="0" green="0" blue="0" />
+      </foreground_color>
+      <actions hook="false" hook_all="false">
+        <action type="OPEN_DISPLAY">
+          <path>pmacStatusAxis.opi</path>
+          <macros>
+            <include_parent_macros>true</include_parent_macros>
+            <SYS>$(CntlSys)</SYS>
+            <DEV>$(CntlDev)</DEV>
+            <AXIS>$(CntlAxis)</AXIS>
+          </macros>
+          <replace>2</replace>
+          <description></description>
+        </action>
+      </actions>
+      <font>
+        <opifont.name fontName="Sans" height="10" style="0">Default</opifont.name>
+      </font>
+    </widget>
+  </widget>
+</display>

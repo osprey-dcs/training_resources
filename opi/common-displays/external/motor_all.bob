@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<display version="2.0.0">
+  <width>525</width>
+  <height>1200</height>
+  <background_color>
+    <color red="240" green="240" blue="240">
+    </color>
+  </background_color>
+  <actions>
+  </actions>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>$(Sys)$(Dev)$(Mtr)</text>
+    <width>525</width>
+    <height>30</height>
+    <font>
+      <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="Title bar" red="0" green="127" blue="255">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>PMAC Status</name>
+    <x>7</x>
+    <y>1086</y>
+    <width>253</width>
+    <height>78</height>
+    <style>1</style>
+    <foreground_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <actions>
+    </actions>
+    <widget type="action_button" version="3.0.0">
+      <name>Action Button</name>
+      <actions>
+        <action type="open_display">
+          <file>pmacStatus.opi</file>
+          <macros>
+            <DEV>$(CntlDev)</DEV>
+            <SYS>$(CntlSys)</SYS>
+          </macros>
+          <target>window</target>
+        </action>
+      </actions>
+      <text>Cntl. Status</text>
+      <x>6</x>
+      <y>12</y>
+      <width>109</width>
+      <height>31</height>
+      <tooltip>$(actions)</tooltip>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>Action Button</name>
+      <actions>
+        <action type="open_display">
+          <file>pmacStatusAxis.opi</file>
+          <macros>
+            <AXIS>$(CntlAxis)</AXIS>
+            <DEV>$(CntlDev)</DEV>
+            <SYS>$(CntlSys)</SYS>
+          </macros>
+          <target>window</target>
+        </action>
+      </actions>
+      <text>Axis Status</text>
+      <x>132</x>
+      <y>12</y>
+      <width>109</width>
+      <height>31</height>
+      <tooltip>$(actions)</tooltip>
+    </widget>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>Drive</name>
+    <x>6</x>
+    <y>120</y>
+    <width>511</width>
+    <height>265</height>
+    <style>1</style>
+    <widget type="embedded" version="2.0.0">
+      <name>Drive_Content</name>
+      <file>motor_drive.opi</file>
+      <width>509</width>
+      <height>245</height>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>Calibration</name>
+    <x>7</x>
+    <y>390</y>
+    <width>511</width>
+    <height>67</height>
+    <style>1</style>
+    <widget type="embedded" version="2.0.0">
+      <name>Calibration_Content</name>
+      <file>motor_calibration.opi</file>
+      <width>509</width>
+      <height>47</height>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>Dynamics</name>
+    <x>7</x>
+    <y>462</y>
+    <width>511</width>
+    <height>241</height>
+    <style>1</style>
+    <widget type="embedded" version="2.0.0">
+      <name>Dynamics_Content</name>
+      <file>motor_dynamics.opi</file>
+      <width>509</width>
+      <height>221</height>
+      <resize>1</resize>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>Status</name>
+    <x>6</x>
+    <y>36</y>
+    <width>511</width>
+    <height>79</height>
+    <style>1</style>
+    <widget type="embedded" version="2.0.0">
+      <name>Status_Content</name>
+      <file>motor_status.opi</file>
+      <width>509</width>
+      <height>59</height>
+      <resize>1</resize>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>Servo Parameters</name>
+    <x>7</x>
+    <y>708</y>
+    <width>511</width>
+    <height>91</height>
+    <style>1</style>
+    <widget type="embedded" version="2.0.0">
+      <name>Servo Parameters_Content</name>
+      <file>motor_servo.opi</file>
+      <width>509</width>
+      <height>71</height>
+      <resize>1</resize>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>Resolution</name>
+    <x>6</x>
+    <y>804</y>
+    <width>254</width>
+    <height>277</height>
+    <style>1</style>
+    <widget type="embedded" version="2.0.0">
+      <name>Resolution_Content</name>
+      <file>motor_resolution.opi</file>
+      <width>252</width>
+      <height>257</height>
+      <resize>1</resize>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>System Status</name>
+    <x>264</x>
+    <y>804</y>
+    <width>254</width>
+    <height>360</height>
+    <style>1</style>
+    <widget type="embedded" version="2.0.0">
+      <name>System Status_Content</name>
+      <file>motor_system_status.opi</file>
+      <width>252</width>
+      <height>340</height>
+      <resize>1</resize>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+  </widget>
+</display>

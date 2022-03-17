@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<display version="2.0.0">
+  <name>Demo Single Motor Beam Detection</name>
+  <width>600</width>
+  <height>720</height>
+  <background_color>
+    <color red="240" green="240" blue="240">
+    </color>
+  </background_color>
+  <actions>
+  </actions>
+  <widget type="rectangle" version="2.0.0">
+    <name>Title background</name>
+    <x>6</x>
+    <y>6</y>
+    <width>589</width>
+    <height>73</height>
+    <line_width>0</line_width>
+    <line_color>
+      <color red="128" green="0" blue="255">
+      </color>
+    </line_color>
+    <background_color>
+      <color red="102" green="153" blue="255">
+      </color>
+    </background_color>
+    <corner_width>16</corner_width>
+    <corner_height>16</corner_height>
+    <actions>
+    </actions>
+    <tooltip>$(pv_name)
+$(pv_value)</tooltip>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Title</name>
+    <text>A demo motor control page:</text>
+    <x>12</x>
+    <y>12</y>
+    <width>571</width>
+    <height>61</height>
+    <font>
+      <font name="Header 1" family="Liberation Sans" style="BOLD" size="22.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </foreground_color>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>Motor Position Set Point:</text>
+    <x>7</x>
+    <y>225</y>
+    <width>241</width>
+    <height>31</height>
+    <font>
+      <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="xyplot" version="2.0.0">
+    <name>XY Graph</name>
+    <x>6</x>
+    <y>306</y>
+    <width>589</width>
+    <height>373</height>
+    <foreground_color>
+      <color red="0" green="0" blue="255">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <title_font>
+      <font family="Arial" style="BOLD" size="11.881188118811881">
+      </font>
+    </title_font>
+    <actions>
+    </actions>
+    <x_axis>
+      <title>Motor Postition (Degrees)</title>
+      <autoscale>false</autoscale>
+      <log_scale>false</log_scale>
+      <minimum>-5.0</minimum>
+      <maximum>5.0</maximum>
+      <show_grid>true</show_grid>
+      <title_font>
+        <font family="Arial" style="BOLD" size="8.910891089108912">
+        </font>
+      </title_font>
+      <scale_font>
+        <font name="Default" family="Liberation Sans" style="REGULAR" size="14.0">
+        </font>
+      </scale_font>
+      <visible>true</visible>
+    </x_axis>
+    <y_axes>
+      <y_axis>
+        <title>Sensor Reading (photon count)</title>
+        <autoscale>false</autoscale>
+        <log_scale>false</log_scale>
+        <minimum>0.0</minimum>
+        <maximum>1.0</maximum>
+        <show_grid>true</show_grid>
+        <title_font>
+          <font family="Arial" style="BOLD" size="8.910891089108912">
+          </font>
+        </title_font>
+        <scale_font>
+          <font name="Default" family="Liberation Sans" style="REGULAR" size="14.0">
+          </font>
+        </scale_font>
+        <visible>true</visible>
+      </y_axis>
+    </y_axes>
+    <traces>
+      <trace>
+        <name>corelation plot - motor position and sensor</name>
+        <x_pv></x_pv>
+        <y_pv>XF:31IDA-BI{Dev:1}E-I</y_pv>
+        <err_pv></err_pv>
+        <axis>0</axis>
+        <trace_type>1</trace_type>
+        <color>
+          <color red="21" green="21" blue="196">
+          </color>
+        </color>
+        <line_width>1</line_width>
+        <point_type>2</point_type>
+        <point_size>5</point_size>
+      </trace>
+      <trace>
+        <name>$(traces[1].y_pv)</name>
+        <x_pv></x_pv>
+        <y_pv>XF:31IDA-OP{Tbl-Ax:X1}Mtr-RBV</y_pv>
+        <err_pv></err_pv>
+        <axis>0</axis>
+        <trace_type>1</trace_type>
+        <color>
+          <color red="0" green="0" blue="255">
+          </color>
+        </color>
+        <line_width>1</line_width>
+        <point_type>0</point_type>
+        <point_size>10</point_size>
+      </trace>
+    </traces>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_1</name>
+    <text>Motor Position Readback:</text>
+    <x>7</x>
+    <y>267</y>
+    <width>241</width>
+    <height>31</height>
+    <font>
+      <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_1</name>
+    <pv_name>XF:31IDA-OP{Tbl-Ax:X1}Mtr.RBV</pv_name>
+    <x>252</x>
+    <y>273</y>
+    <width>122</width>
+    <background_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_2</name>
+    <text>Motor Moving:</text>
+    <x>439</x>
+    <y>225</y>
+    <width>157</width>
+    <height>31</height>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED</name>
+    <pv_name>XF:31IDA-OP{Tbl-Ax:X1}Mtr.MOVN</pv_name>
+    <x>501</x>
+    <y>257</y>
+    <width>33</width>
+    <height>33</height>
+    <off_color>
+      <color red="0" green="100" blue="0">
+      </color>
+    </off_color>
+    <on_color>
+      <color red="0" green="255" blue="0">
+      </color>
+    </on_color>
+    <foreground_color>
+      <color red="192" green="192" blue="192">
+      </color>
+    </foreground_color>
+    <actions>
+    </actions>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>Text Input</name>
+    <pv_name>XF:31IDA-OP{Tbl-Ax:X1}Mtr</pv_name>
+    <x>252</x>
+    <y>228</y>
+    <width>122</width>
+    <height>25</height>
+    <background_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </background_color>
+    <actions>
+    </actions>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="rectangle" version="2.0.0">
+    <name>Example background</name>
+    <x>6</x>
+    <y>84</y>
+    <width>589</width>
+    <height>139</height>
+    <line_width>0</line_width>
+    <line_color>
+      <color red="128" green="0" blue="255">
+      </color>
+    </line_color>
+    <background_color>
+      <color red="255" green="255" blue="128">
+      </color>
+    </background_color>
+    <corner_width>16</corner_width>
+    <corner_height>16</corner_height>
+    <actions>
+    </actions>
+    <tooltip>$(pv_name)
+$(pv_value)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button</name>
+    <actions>
+      <action type="open_display">
+        <file>../main.opi</file>
+        <target>replace</target>
+      </action>
+    </actions>
+    <text>Home</text>
+    <x>7</x>
+    <y>684</y>
+    <width>288</width>
+    <height>34</height>
+    <tooltip>Open next demo screen</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_1</name>
+    <actions>
+      <action type="open_display">
+        <file>03_demo_linking_container.bob</file>
+        <target>replace</target>
+      </action>
+    </actions>
+    <text>Open next demo screen</text>
+    <x>307</x>
+    <y>684</y>
+    <width>288</width>
+    <height>34</height>
+    <tooltip>Open next demo screen</tooltip>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Example description</name>
+    <text>In this example, change the motor position to find the peak in the sensor reading [Hint: somewhere between -5, 5]
+Like the previous example we have a TextInput (Motor Position Set Point) which allows you to enter the desired motor position in degrees. There are 2 monitor Widgets an LED which indicated when the motor is moving and a Position Reacdback which displays the realtime position of the motor
+The XY graph is a correlation plot of motor position and sensor reading. This is configured under Trace 0 by setting the X PV as Motor position (XF:31IDA-OP{Tbl-Ax:X1}Mtr.RBV) and Y PV and sensore reading (XF:31IDA-BI{Dev:1}E-I).</text>
+    <x>12</x>
+    <y>90</y>
+    <width>577</width>
+    <height>127</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="12.0">
+      </font>
+    </font>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="xyplot" version="2.0.0">
+    <name>X/Y Plot</name>
+    <y>720</y>
+    <width>544</width>
+    <height>240</height>
+    <traces>
+      <trace>
+        <name>$(traces[0].y_pv)</name>
+        <x_pv></x_pv>
+        <y_pv>XF:31IDA-OP{Tbl-Ax:X1}Mtr-RBV</y_pv>
+        <err_pv></err_pv>
+        <axis>0</axis>
+        <trace_type>1</trace_type>
+        <color>
+          <color red="0" green="0" blue="255">
+          </color>
+        </color>
+        <line_width>1</line_width>
+        <point_type>0</point_type>
+        <point_size>10</point_size>
+      </trace>
+    </traces>
+  </widget>
+</display>

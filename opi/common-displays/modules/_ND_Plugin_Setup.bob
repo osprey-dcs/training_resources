@@ -1,0 +1,830 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<display version="2.0.0">
+  <name>Display</name>
+  <width>390</width>
+  <height>475</height>
+  <background_color>
+    <color red="240" green="240" blue="240">
+    </color>
+  </background_color>
+  <actions>
+  </actions>
+  <widget type="group" version="2.0.0">
+    <name>Plugin Setup</name>
+    <width>390</width>
+    <height>475</height>
+    <style>1</style>
+    <font>
+      <font name="Header1" family="Liberation Sans" style="REGULAR" size="14.0">
+      </font>
+    </font>
+    <background_color>
+      <color name="Read_Background" red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <actions>
+    </actions>
+    <widget type="combo" version="2.0.0">
+      <name>Combo Box</name>
+      <pv_name>${P}${R}EnableCallbacks</pv_name>
+      <x>150</x>
+      <y>100</y>
+      <width>110</width>
+      <height>29</height>
+      <background_color>
+        <color red="0" green="255" blue="255">
+        </color>
+      </background_color>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_6</name>
+      <text>Callbacks block</text>
+      <x>10</x>
+      <y>155</y>
+      <width>150</width>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>Text Input_1</name>
+      <pv_name>${P}${R}NDArrayAddress</pv_name>
+      <x>150</x>
+      <y>80</y>
+      <width>110</width>
+      <background_color>
+        <color red="0" green="255" blue="255">
+        </color>
+      </background_color>
+      <actions>
+      </actions>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_15</name>
+      <text>Unique ID</text>
+      <x>10</x>
+      <y>380</y>
+      <width>90</width>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_8</name>
+      <pv_name>${P}${R}ArrayRate_RBV</pv_name>
+      <x>151</x>
+      <y>206</y>
+      <width>108</width>
+      <height>18</height>
+      <foreground_color>
+        <color red="0" green="0" blue="255">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <transparent>true</transparent>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <border_width>1</border_width>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_7</name>
+      <pv_name>${P}${R}ArrayCounter_RBV</pv_name>
+      <x>271</x>
+      <y>181</y>
+      <width>108</width>
+      <height>18</height>
+      <foreground_color>
+        <color red="0" green="0" blue="255">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <transparent>true</transparent>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <border_width>1</border_width>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_7</name>
+      <pv_name>${P}${R}EnableCallbacks_RBV</pv_name>
+      <x>271</x>
+      <y>106</y>
+      <width>108</width>
+      <height>18</height>
+      <foreground_color>
+        <color red="0" green="0" blue="255">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <transparent>true</transparent>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <border_width>1</border_width>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>Text Input_3</name>
+      <pv_name>${P}${R}ArrayCounter</pv_name>
+      <x>150</x>
+      <y>180</y>
+      <width>110</width>
+      <background_color>
+        <color red="0" green="255" blue="255">
+        </color>
+      </background_color>
+      <actions>
+      </actions>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_1</name>
+      <text>Plugin Type</text>
+      <x>10</x>
+      <y>30</y>
+      <width>110</width>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_1</name>
+      <pv_name>${P}${R}PortName_RBV</pv_name>
+      <x>151</x>
+      <y>31</y>
+      <width>108</width>
+      <height>18</height>
+      <foreground_color>
+        <color red="0" green="0" blue="255">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <transparent>true</transparent>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <border_width>1</border_width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_7</name>
+      <text>Enable</text>
+      <x>10</x>
+      <y>105</y>
+      <width>120</width>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_14</name>
+      <text>Bayer Pattern</text>
+      <x>10</x>
+      <y>355</y>
+      <width>130</width>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_17</name>
+      <text>Attributes file</text>
+      <x>10</x>
+      <y>430</y>
+      <width>150</width>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_17</name>
+      <pv_name>${P}${R}ArraySize2_RBV</pv_name>
+      <x>311</x>
+      <y>281</y>
+      <width>68</width>
+      <height>18</height>
+      <foreground_color>
+        <color red="0" green="0" blue="255">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <transparent>true</transparent>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <border_width>1</border_width>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_10</name>
+      <pv_name>${P}${R}NDimensions_RBV</pv_name>
+      <x>151</x>
+      <y>256</y>
+      <width>108</width>
+      <height>18</height>
+      <foreground_color>
+        <color red="0" green="0" blue="255">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <transparent>true</transparent>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <border_width>1</border_width>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_9</name>
+      <pv_name>${P}${R}DroppedArrays_RBV</pv_name>
+      <x>271</x>
+      <y>231</y>
+      <width>108</width>
+      <height>18</height>
+      <foreground_color>
+        <color red="0" green="0" blue="255">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <transparent>true</transparent>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <border_width>1</border_width>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>Text Input</name>
+      <pv_name>${P}${R}NDArrayPort</pv_name>
+      <x>150</x>
+      <y>55</y>
+      <width>110</width>
+      <background_color>
+        <color red="0" green="255" blue="255">
+        </color>
+      </background_color>
+      <actions>
+      </actions>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_3</name>
+      <text>Asyn Port</text>
+      <x>10</x>
+      <y>5</y>
+      <width>90</width>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_2</name>
+      <pv_name>${P}${R}NDArrayPort_RBV</pv_name>
+      <x>271</x>
+      <y>56</y>
+      <width>108</width>
+      <height>18</height>
+      <foreground_color>
+        <color red="0" green="0" blue="255">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <transparent>true</transparent>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <border_width>1</border_width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_11</name>
+      <text>Array Size</text>
+      <x>10</x>
+      <y>280</y>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update</name>
+      <pv_name>${P}${R}PortName_RBV</pv_name>
+      <x>151</x>
+      <y>6</y>
+      <width>108</width>
+      <height>18</height>
+      <foreground_color>
+        <color red="0" green="0" blue="255">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <transparent>true</transparent>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <border_width>1</border_width>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>Text Input_2</name>
+      <pv_name>${P}${R}MinCallbackTime</pv_name>
+      <x>150</x>
+      <y>130</y>
+      <width>110</width>
+      <background_color>
+        <color red="0" green="255" blue="255">
+        </color>
+      </background_color>
+      <actions>
+      </actions>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_16</name>
+      <pv_name>${P}${R}TimeStamp_RBV</pv_name>
+      <x>151</x>
+      <y>406</y>
+      <width>108</width>
+      <height>18</height>
+      <foreground_color>
+        <color red="0" green="0" blue="255">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <transparent>true</transparent>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <border_width>1</border_width>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_11</name>
+      <pv_name>${P}${R}ArraySize0_RBV</pv_name>
+      <x>151</x>
+      <y>281</y>
+      <width>68</width>
+      <height>18</height>
+      <foreground_color>
+        <color red="0" green="0" blue="255">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <transparent>true</transparent>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <border_width>1</border_width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_2</name>
+      <text>Array Port</text>
+      <x>10</x>
+      <y>55</y>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_12</name>
+      <text>Data type</text>
+      <x>10</x>
+      <y>305</y>
+      <width>90</width>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="combo" version="2.0.0">
+      <name>Combo Box_1</name>
+      <pv_name>${P}${R}BlockingCallbacks</pv_name>
+      <x>150</x>
+      <y>150</y>
+      <width>110</width>
+      <height>29</height>
+      <background_color>
+        <color red="0" green="255" blue="255">
+        </color>
+      </background_color>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_3</name>
+      <text>Array Address</text>
+      <x>10</x>
+      <y>80</y>
+      <width>130</width>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_3</name>
+      <pv_name>${P}${R}NDArrayAddress_RBV</pv_name>
+      <x>271</x>
+      <y>81</y>
+      <width>108</width>
+      <height>18</height>
+      <foreground_color>
+        <color red="0" green="0" blue="255">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <transparent>true</transparent>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <border_width>1</border_width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_13</name>
+      <text>Color Mode</text>
+      <x>10</x>
+      <y>330</y>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_5</name>
+      <text>Min. Time</text>
+      <x>10</x>
+      <y>130</y>
+      <width>130</width>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>Text Input_5</name>
+      <pv_name>${P}${R}NDAttributesFile</pv_name>
+      <x>150</x>
+      <y>430</y>
+      <width>110</width>
+      <background_color>
+        <color red="0" green="255" blue="255">
+        </color>
+      </background_color>
+      <format>6</format>
+      <actions>
+      </actions>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_9</name>
+      <text>Dropped Arrays</text>
+      <x>10</x>
+      <y>230</y>
+      <width>140</width>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_12</name>
+      <pv_name>${P}${R}DataType_RBV</pv_name>
+      <x>151</x>
+      <y>306</y>
+      <width>108</width>
+      <height>18</height>
+      <foreground_color>
+        <color red="0" green="0" blue="255">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <transparent>true</transparent>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <border_width>1</border_width>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_13</name>
+      <pv_name>${P}${R}ColorMode_RBV</pv_name>
+      <x>151</x>
+      <y>331</y>
+      <width>108</width>
+      <height>18</height>
+      <foreground_color>
+        <color red="0" green="0" blue="255">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <transparent>true</transparent>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <border_width>1</border_width>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_15</name>
+      <pv_name>${P}${R}UniqueId_RBV</pv_name>
+      <x>151</x>
+      <y>381</y>
+      <width>108</width>
+      <height>18</height>
+      <foreground_color>
+        <color red="0" green="0" blue="255">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <transparent>true</transparent>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <border_width>1</border_width>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_18</name>
+      <pv_name>${P}${R}ArraySize1_RBV</pv_name>
+      <x>231</x>
+      <y>281</y>
+      <width>68</width>
+      <height>18</height>
+      <foreground_color>
+        <color red="0" green="0" blue="255">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <transparent>true</transparent>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <border_width>1</border_width>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_5</name>
+      <pv_name>${P}${R}MinCallbackTime_RBV</pv_name>
+      <x>271</x>
+      <y>131</y>
+      <width>108</width>
+      <height>18</height>
+      <foreground_color>
+        <color red="0" green="0" blue="255">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <transparent>true</transparent>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <border_width>1</border_width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_8</name>
+      <text>Array Rate</text>
+      <x>10</x>
+      <y>205</y>
+      <width>110</width>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_7</name>
+      <text>Array Counter</text>
+      <x>10</x>
+      <y>180</y>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_14</name>
+      <pv_name>${P}${R}BayerPattern_RBV</pv_name>
+      <x>151</x>
+      <y>356</y>
+      <width>108</width>
+      <height>18</height>
+      <foreground_color>
+        <color red="0" green="0" blue="255">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <transparent>true</transparent>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <border_width>1</border_width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_10</name>
+      <text># Dimensions</text>
+      <x>10</x>
+      <y>255</y>
+      <width>120</width>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_6</name>
+      <pv_name>${P}${R}BlockingCallbacks_RBV</pv_name>
+      <x>271</x>
+      <y>156</y>
+      <width>108</width>
+      <height>18</height>
+      <foreground_color>
+        <color red="0" green="0" blue="255">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <transparent>true</transparent>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <border_width>1</border_width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_16</name>
+      <text>TimeStamp</text>
+      <x>10</x>
+      <y>405</y>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>Text Input_4</name>
+      <pv_name>${P}${R}DroppedArrays</pv_name>
+      <x>150</x>
+      <y>230</y>
+      <width>110</width>
+      <background_color>
+        <color red="0" green="255" blue="255">
+        </color>
+      </background_color>
+      <actions>
+      </actions>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+  </widget>
+</display>

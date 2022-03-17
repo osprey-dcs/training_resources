@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<display version="2.0.0">
+  <name>Motor Overview</name>
+  <width>600</width>
+  <height>40</height>
+  <background_color>
+    <color red="240" green="240" blue="240">
+    </color>
+  </background_color>
+  <actions>
+  </actions>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_1</name>
+    <pv_name>XF:31IDA-OP{Tbl-Ax:X${N}}Mtr.RBV</pv_name>
+    <x>263</x>
+    <y>6</y>
+    <width>127</width>
+    <height>25</height>
+    <background_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED</name>
+    <pv_name>XF:31IDA-OP{Tbl-Ax:X${N}}Mtr.MOVN</pv_name>
+    <x>446</x>
+    <y>8</y>
+    <width>21</width>
+    <height>21</height>
+    <off_color>
+      <color red="0" green="100" blue="0">
+      </color>
+    </off_color>
+    <on_color>
+      <color red="0" green="255" blue="0">
+      </color>
+    </on_color>
+    <foreground_color>
+      <color red="192" green="192" blue="192">
+      </color>
+    </foreground_color>
+    <actions>
+    </actions>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>Text Input</name>
+    <pv_name>XF:31IDA-OP{Tbl-Ax:X${N}}Mtr.VAL</pv_name>
+    <x>137</x>
+    <y>6</y>
+    <width>122</width>
+    <height>25</height>
+    <background_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </background_color>
+    <actions>
+    </actions>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>Motor${N}</text>
+    <x>30</x>
+    <y>8</y>
+    <width>80</width>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button</name>
+    <actions>
+      <action type="open_display">
+        <file>_motor_detailed_controls.opi</file>
+        <macros>
+          <M>Mtr</M>
+          <P>XF:31IDA-OP{Tbl-Ax:X${N}}</P>
+        </macros>
+        <target>replace</target>
+      </action>
+    </actions>
+    <text>Details</text>
+    <x>516</x>
+    <y>3</y>
+    <width>80</width>
+    <height>31</height>
+    <tooltip>open detailed control opi</tooltip>
+  </widget>
+</display>
