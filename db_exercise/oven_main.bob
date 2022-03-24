@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<display version="2.0.0">
+  <name>Display</name>
+  <macros>
+    <P>${USER}</P>
+  </macros>
+  <width>1024</width>
+  <height>768</height>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <class>TITLE</class>
+    <text>EPICS-Controls CO Oven</text>
+    <x use_class="true">0</x>
+    <y use_class="true">0</y>
+    <width>550</width>
+    <height>31</height>
+    <font use_class="true">
+      <font name="Header 1" family="Liberation Sans" style="BOLD" size="22.0">
+      </font>
+    </font>
+    <foreground_color use_class="true">
+      <color name="Text" red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <transparent use_class="true">true</transparent>
+  </widget>
+  <widget type="combo" version="2.0.0">
+    <name>Combo Box</name>
+    <pv_name>$(P):program</pv_name>
+    <x>460</x>
+    <y>80</y>
+    <width>130</width>
+    <rules>
+      <rule name="Lock" prop_id="enabled" out_exp="false">
+        <exp bool_exp="pv0">
+          <value>false</value>
+        </exp>
+        <pv_name>$(P):lock</pv_name>
+      </rule>
+    </rules>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_1</name>
+    <text>Program</text>
+    <x>460</x>
+    <y>60</y>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update</name>
+    <pv_name>$(P):program_RBV</pv_name>
+    <x>620</x>
+    <y>80</y>
+    <width>150</width>
+    <height>30</height>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>Text Entry</name>
+    <pv_name>$(P):setpoint</pv_name>
+    <x>460</x>
+    <y>140</y>
+    <width>130</width>
+    <height>30</height>
+    <rules>
+      <rule name="Lock" prop_id="enabled" out_exp="false">
+        <exp bool_exp="pv0">
+          <value>false</value>
+        </exp>
+        <pv_name>$(P):lock</pv_name>
+      </rule>
+    </rules>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_2</name>
+    <text>Setpoint</text>
+    <x>460</x>
+    <y>120</y>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_1</name>
+    <pv_name>$(P):tempdisplay_RBV</pv_name>
+    <x>620</x>
+    <y>140</y>
+    <width>130</width>
+    <height>30</height>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_3</name>
+    <text>Display Temp</text>
+    <x>620</x>
+    <y>120</y>
+  </widget>
+  <widget type="stripchart" version="2.0.0">
+    <name>Strip Chart_1</name>
+    <x>30</x>
+    <y>60</y>
+    <title>Temperature</title>
+    <show_toolbar>false</show_toolbar>
+    <y_axes>
+      <y_axis>
+        <title>Y</title>
+        <autoscale>true</autoscale>
+        <log_scale>false</log_scale>
+        <minimum>0.0</minimum>
+        <maximum>100.0</maximum>
+        <show_grid>false</show_grid>
+        <visible>true</visible>
+      </y_axis>
+    </y_axes>
+    <traces>
+      <trace>
+        <name>$(traces[0].y_pv)</name>
+        <y_pv>$(P):temperature_RBV</y_pv>
+        <axis>0</axis>
+        <trace_type>2</trace_type>
+        <color>
+          <color red="0" green="0" blue="255">
+          </color>
+        </color>
+        <line_width>2</line_width>
+        <point_type>0</point_type>
+        <point_size>10</point_size>
+        <visible>true</visible>
+      </trace>
+    </traces>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_2</name>
+    <pv_name>$(P):temperature_RBV</pv_name>
+    <x>320</x>
+    <y>60</y>
+    <precision>2</precision>
+  </widget>
+  <widget type="bool_button" version="2.0.0">
+    <name>Boolean Button_6</name>
+    <pv_name>$(P):lock</pv_name>
+    <x>460</x>
+    <y>280</y>
+    <width>290</width>
+    <on_color>
+      <color name="STOP" red="255" green="0" blue="0">
+      </color>
+    </on_color>
+    <show_led>false</show_led>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_8</name>
+    <text>Child-lock</text>
+    <x>460</x>
+    <y>260</y>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>Expert Controls</name>
+    <x>30</x>
+    <y>400</y>
+    <width>210</width>
+    <height>250</height>
+    <transparent>true</transparent>
+    <widget type="led" version="2.0.0">
+      <name>LED</name>
+      <pv_name>$(P):fan_RBV</pv_name>
+      <x>140</x>
+      <y>20</y>
+      <width>30</width>
+      <height>30</height>
+    </widget>
+    <widget type="bool_button" version="2.0.0">
+      <name>Boolean Button_1</name>
+      <pv_name>$(P):fan</pv_name>
+      <y>20</y>
+      <show_led>false</show_led>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_5</name>
+      <text>Fan/Exhaust</text>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_6</name>
+      <text>Heat</text>
+      <y>140</y>
+    </widget>
+    <widget type="bool_button" version="2.0.0">
+      <name>Boolean Button_2</name>
+      <pv_name>$(P):heat</pv_name>
+      <y>160</y>
+      <show_led>false</show_led>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LED_1</name>
+      <pv_name>$(P):heat_RBV</pv_name>
+      <x>140</x>
+      <y>160</y>
+      <width>30</width>
+      <height>30</height>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LED_3</name>
+      <pv_name>$(P):door_RBV</pv_name>
+      <x>140</x>
+      <y>90</y>
+      <width>30</width>
+      <height>30</height>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_7</name>
+      <text>Oven Door</text>
+      <y>70</y>
+    </widget>
+    <widget type="bool_button" version="2.0.0">
+      <name>Boolean Button_5</name>
+      <pv_name>$(P):door</pv_name>
+      <y>90</y>
+      <show_led>false</show_led>
+    </widget>
+  </widget>
+  <widget type="picture" version="2.0.0">
+    <name>Picture</name>
+    <file>oven_closed.png</file>
+    <x>430</x>
+    <y>400</y>
+    <width>310</width>
+    <height>320</height>
+  </widget>
+  <widget type="bool_button" version="2.0.0">
+    <name>Boolean Button_7</name>
+    <pv_name>$(P):light</pv_name>
+    <x>460</x>
+    <y>200</y>
+    <width>130</width>
+    <show_led>false</show_led>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_5</name>
+    <pv_name>$(P):light_RBV</pv_name>
+    <x>620</x>
+    <y>200</y>
+    <width>30</width>
+    <height>30</height>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_9</name>
+    <text>Oven Light</text>
+    <x>460</x>
+    <y>180</y>
+  </widget>
+  <widget type="picture" version="2.0.0">
+    <name>Door</name>
+    <file>oven_opened.png</file>
+    <x>360</x>
+    <y>320</y>
+    <width>440</width>
+    <height>490</height>
+    <visible>false</visible>
+    <rules>
+      <rule name="Door" prop_id="visible" out_exp="false">
+        <exp bool_exp="pv0 == 1">
+          <value>true</value>
+        </exp>
+        <pv_name>$(P):door_RBV</pv_name>
+      </rule>
+    </rules>
+  </widget>
+  <widget type="rectangle" version="2.0.0">
+    <name>Rectangle</name>
+    <x>500</x>
+    <y>488</y>
+    <width>160</width>
+    <height>102</height>
+    <visible>false</visible>
+    <line_width>10</line_width>
+    <line_color>
+      <color name="ActiveText" red="255" green="255" blue="0">
+      </color>
+    </line_color>
+    <background_color>
+      <color name="ActiveText" red="255" green="255" blue="0">
+      </color>
+    </background_color>
+    <transparent>true</transparent>
+    <rules>
+      <rule name="Light" prop_id="visible" out_exp="false">
+        <exp bool_exp="pv0">
+          <value>true</value>
+        </exp>
+        <pv_name>$(P):light_RBV</pv_name>
+      </rule>
+    </rules>
+  </widget>
+  <widget type="picture" version="2.0.0">
+    <name>Fire</name>
+    <file>fire.gif</file>
+    <x>490</x>
+    <y>590</y>
+    <width>190</width>
+    <height>40</height>
+    <visible>false</visible>
+    <stretch_image>true</stretch_image>
+    <rules>
+      <rule name="Heat" prop_id="visible" out_exp="false">
+        <exp bool_exp="pv0">
+          <value>true</value>
+        </exp>
+        <pv_name>$(P):heat_RBV</pv_name>
+      </rule>
+    </rules>
+  </widget>
+  <widget type="picture" version="2.0.0">
+    <name>Fan</name>
+    <file>fan.gif</file>
+    <x>700</x>
+    <y>488</y>
+    <visible>false</visible>
+    <rules>
+      <rule name="Fan" prop_id="visible" out_exp="false">
+        <exp bool_exp="pv0">
+          <value>true</value>
+        </exp>
+        <pv_name>$(P):fan_RBV</pv_name>
+      </rule>
+    </rules>
+  </widget>
+  <widget type="picture" version="2.0.0">
+    <name>Picture_8</name>
+    <file>unlocked.jpg</file>
+    <x>530</x>
+    <y>20</y>
+    <width>50</width>
+    <height>52</height>
+    <stretch_image>true</stretch_image>
+    <rules>
+      <rule name="Lock" prop_id="file" out_exp="false">
+        <exp bool_exp="pv0">
+          <value>locked.jpg</value>
+        </exp>
+        <pv_name>$(P):lock</pv_name>
+      </rule>
+    </rules>
+  </widget>
+</display>
