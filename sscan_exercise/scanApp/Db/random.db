@@ -1,0 +1,43 @@
+record(ao, "$(P):setpoint")
+{
+    field(FLNK, "_$(P):start")
+}
+
+record(ao, "_$(P):start")
+{
+    field(DOL, "1")
+    field(OUT, "_$(P):busy PP")
+}
+
+record(busy, "_$(P):busy")
+{}
+
+record(calcout, "_$(P):done")
+{
+    field(INPA, "$(P):setpoint_RBV CP")
+    field(INPB, "$(P):setpoint CP")
+    field(CALC, "ABS(A-B)<0.01?0:1")
+    field(OOPT, "Transition To Zero")
+    field(OUT,  "_$(P):busy PP")
+}
+
+record(calcout, "_$(P):update")
+{
+	field(INPA, "$(P):setpoint CP")
+	field(INPB, "$(P):setpoint_RBV")
+	field(CALC, "A>B?B+.1:A<B-0.1?B-0.1:0")
+	field(OUT, "$(P):setpoint_RBV PP")
+	field(OOPT, "When Non-zero")
+	field(SCAN, ".5 second")
+}
+
+record(ai, "$(P):setpoint_RBV")
+{
+	field(FLNK,"$(P):detector")
+}
+
+record(calc, "$(P):detector")
+{
+	field(INPA, "$(P):setpoint_RBV")
+	field(CALC, "RNDM*10+A")
+}
