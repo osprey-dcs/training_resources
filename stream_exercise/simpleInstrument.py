@@ -41,8 +41,8 @@ class DummyDevice(socketserver.StreamRequestHandler):
             reply = None
             if verbose:
                 print ("> " + line)
-            if (line == '*IDN?'):
-                reply = '*IDN US-PAS Instrument, Yoyodyne Inc. -- An ACME Industries subsidiary, S/N:1313'
+            if (line == 'SN?'):
+                reply = 'S/N:123456789'
             elif (line == 'ON?'):
                 reply = 'ON ' + ('1' if on else '0')
             elif (line == 'VOLTS?'):
@@ -82,8 +82,8 @@ class Server(socketserver.ThreadingMixIn, socketserver.TCPServer):
     def __init__(self, server_address, RequestHandlerClass):
         socketserver.TCPServer.__init__(self, server_address, RequestHandlerClass)
 
-server = Server(('0.0.0.0', 24742), DummyDevice)
-print("Serving on TCP 24742")
+server = Server(('0.0.0.0', 5050), DummyDevice)
+print("Serving on TCP 5050")
 print("Terminate with Ctrl-C")
 try:
     server.serve_forever()
