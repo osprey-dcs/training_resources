@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <display version="2.0.0">
   <name>scan_full</name>
-  <macros>
-    <P>${USER}:</P>
-    <S>scan1</S>
-  </macros>
   <x>699</x>
   <y>114</y>
   <width>390</width>
@@ -49,8 +45,7 @@
     <text>3</text>
     <x>15</x>
     <y>297</y>
-    <width>9</width>
-    <height>18</height>
+    <width>15</width>
     <font>
       <font family="Liberation Sans" style="REGULAR" size="16.0">
       </font>
@@ -74,8 +69,7 @@
     <text>R</text>
     <x>147</x>
     <y>295</y>
-    <width>12</width>
-    <height>18</height>
+    <width>10</width>
     <font>
       <font family="Liberation Sans" style="REGULAR" size="16.0">
       </font>
@@ -99,8 +93,7 @@
     <text>3</text>
     <x>15</x>
     <y>297</y>
-    <width>9</width>
-    <height>18</height>
+    <width>15</width>
     <font>
       <font family="Liberation Sans" style="REGULAR" size="16.0">
       </font>
@@ -120,8 +113,7 @@
     <text>1</text>
     <x>15</x>
     <y>277</y>
-    <width>9</width>
-    <height>18</height>
+    <width>15</width>
     <font>
       <font family="Liberation Sans" style="REGULAR" size="16.0">
       </font>
@@ -145,8 +137,7 @@
     <text>2</text>
     <x>200</x>
     <y>277</y>
-    <width>9</width>
-    <height>18</height>
+    <width>15</width>
     <font>
       <font family="Liberation Sans" style="REGULAR" size="16.0">
       </font>
@@ -170,8 +161,7 @@
     <text>1</text>
     <x>15</x>
     <y>277</y>
-    <width>9</width>
-    <height>18</height>
+    <width>15</width>
     <font>
       <font family="Liberation Sans" style="REGULAR" size="16.0">
       </font>
@@ -439,8 +429,8 @@
     <text>SCAN DIM:</text>
     <x>300</x>
     <y>1</y>
-    <width>63</width>
-    <height>14</height>
+    <width>55</width>
+    <height>12</height>
     <font>
       <font family="Liberation Sans" style="REGULAR" size="12.0">
       </font>
@@ -502,8 +492,8 @@
   <widget type="label" version="2.0.0">
     <name>text #96</name>
     <text>$(N)</text>
-    <width>59</width>
-    <height>34</height>
+    <width>40</width>
+    <height>30</height>
     <font>
       <font family="Liberation Sans" style="REGULAR" size="30.0">
       </font>
@@ -578,7 +568,6 @@
       <color red="51" green="153" blue="0">
       </color>
     </background_color>
-    <tooltip>$(actions)</tooltip>
   </widget>
   <widget type="textentry" version="3.0.0">
     <name>text entry #111</name>
@@ -620,8 +609,8 @@
     <text>BeforeScan</text>
     <x>5</x>
     <y>74</y>
-    <width>74</width>
-    <height>16</height>
+    <width>70</width>
+    <height>14</height>
     <auto_size>true</auto_size>
   </widget>
   <widget type="label" version="2.0.0">
@@ -629,8 +618,8 @@
     <text>BAD</text>
     <x>235</x>
     <y>71</y>
-    <width>21</width>
-    <height>12</height>
+    <width>25</width>
+    <height>10</height>
     <font>
       <font family="Liberation Sans" style="REGULAR" size="10.0">
       </font>
@@ -654,8 +643,8 @@
     <text>LINK</text>
     <x>235</x>
     <y>81</y>
-    <width>23</width>
-    <height>12</height>
+    <width>25</width>
+    <height>10</height>
     <font>
       <font family="Liberation Sans" style="REGULAR" size="10.0">
       </font>
@@ -680,34 +669,34 @@
     <y>354</y>
     <width>2</width>
     <height>204</height>
+    <line_width>2</line_width>
+    <line_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </line_color>
     <points>
       <point x="1.0" y="1.0">
       </point>
       <point x="1.0" y="203.0">
       </point>
     </points>
-    <line_width>2</line_width>
-    <line_color>
-      <color red="0" green="0" blue="0">
-      </color>
-    </line_color>
   </widget>
   <widget type="polyline" version="2.0.0">
     <name>polyline #134</name>
     <y>66</y>
     <width>380</width>
     <height>2</height>
+    <line_width>2</line_width>
+    <line_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </line_color>
     <points>
       <point x="1.0" y="1.0">
       </point>
       <point x="379.0" y="1.0">
       </point>
     </points>
-    <line_width>2</line_width>
-    <line_color>
-      <color red="0" green="0" blue="0">
-      </color>
-    </line_color>
   </widget>
   <widget type="action_button" version="3.0.0">
     <name>message button #138</name>
@@ -751,7 +740,6 @@
       <color red="51" green="153" blue="0">
       </color>
     </background_color>
-    <tooltip>$(actions)</tooltip>
   </widget>
   <widget type="textentry" version="3.0.0">
     <name>text entry #144</name>
@@ -809,17 +797,17 @@
     <y>92</y>
     <width>379</width>
     <height>2</height>
+    <line_width>2</line_width>
+    <line_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </line_color>
     <points>
       <point x="1.0" y="1.0">
       </point>
       <point x="378.0" y="1.0">
       </point>
     </points>
-    <line_width>2</line_width>
-    <line_color>
-      <color red="0" green="0" blue="0">
-      </color>
-    </line_color>
   </widget>
   <widget type="textentry" version="3.0.0">
     <name>text entry #158</name>
@@ -929,8 +917,8 @@
     <text>(S)</text>
     <x>195</x>
     <y>234</y>
-    <width>16</width>
-    <height>14</height>
+    <width>20</width>
+    <height>12</height>
     <font>
       <font family="Liberation Sans" style="REGULAR" size="12.0">
       </font>
@@ -1002,8 +990,7 @@
     <text>X</text>
     <x>260</x>
     <y>148</y>
-    <width>11</width>
-    <height>18</height>
+    <width>10</width>
     <font>
       <font family="Liberation Sans" style="REGULAR" size="16.0">
       </font>
@@ -1139,17 +1126,17 @@
     <y>248</y>
     <width>371</width>
     <height>2</height>
+    <line_width>2</line_width>
+    <line_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </line_color>
     <points>
       <point x="1.0" y="1.0">
       </point>
       <point x="370.0" y="1.0">
       </point>
     </points>
-    <line_width>2</line_width>
-    <line_color>
-      <color red="0" green="0" blue="0">
-      </color>
-    </line_color>
   </widget>
   <widget type="action_button" version="3.0.0">
     <name>message button #229</name>
@@ -1177,17 +1164,17 @@
     <y>351</y>
     <width>371</width>
     <height>2</height>
+    <line_width>2</line_width>
+    <line_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </line_color>
     <points>
       <point x="1.0" y="1.0">
       </point>
       <point x="370.0" y="1.0">
       </point>
     </points>
-    <line_width>2</line_width>
-    <line_color>
-      <color red="0" green="0" blue="0">
-      </color>
-    </line_color>
   </widget>
   <widget type="action_button" version="3.0.0">
     <name>related display #236</name>
@@ -1325,7 +1312,6 @@
       <color red="51" green="153" blue="0">
       </color>
     </background_color>
-    <tooltip>$(actions)</tooltip>
   </widget>
   <widget type="action_button" version="3.0.0">
     <name>message button #245</name>
@@ -1376,8 +1362,8 @@
     <text>CLIENT WAIT</text>
     <x>15</x>
     <y>323</y>
-    <width>89</width>
-    <height>16</height>
+    <width>75</width>
+    <height>14</height>
     <auto_size>true</auto_size>
   </widget>
   <widget type="action_button" version="3.0.0">
@@ -1405,8 +1391,8 @@
     <text>WAITING</text>
     <x>163</x>
     <y>323</y>
-    <width>60</width>
-    <height>16</height>
+    <width>50</width>
+    <height>14</height>
     <foreground_color>
       <color red="251" green="243" blue="74">
       </color>
@@ -1468,8 +1454,8 @@
     <text>AUTO WAIT FOR</text>
     <x>230</x>
     <y>327</y>
-    <width>96</width>
-    <height>14</height>
+    <width>80</width>
+    <height>12</height>
     <font>
       <font family="Liberation Sans" style="REGULAR" size="12.0">
       </font>
@@ -1481,8 +1467,8 @@
     <text>CLIENTS</text>
     <x>333</x>
     <y>327</y>
-    <width>51</width>
-    <height>14</height>
+    <width>45</width>
+    <height>12</height>
     <font>
       <font family="Liberation Sans" style="REGULAR" size="12.0">
       </font>
@@ -1551,8 +1537,8 @@
     <text>(S)</text>
     <x>325</x>
     <y>257</y>
-    <width>16</width>
-    <height>14</height>
+    <width>20</width>
+    <height>12</height>
     <font>
       <font family="Liberation Sans" style="REGULAR" size="12.0">
       </font>
@@ -1564,8 +1550,7 @@
     <text>4</text>
     <x>200</x>
     <y>297</y>
-    <width>9</width>
-    <height>18</height>
+    <width>15</width>
     <font>
       <font family="Liberation Sans" style="REGULAR" size="16.0">
       </font>
@@ -1678,14 +1663,13 @@
       <color red="51" green="153" blue="0">
       </color>
     </background_color>
-    <tooltip>$(actions)</tooltip>
   </widget>
   <widget type="label" version="2.0.0">
     <name>text #314</name>
     <text>DATA STATE:</text>
     <y>36</y>
-    <width>78</width>
-    <height>14</height>
+    <width>67</width>
+    <height>12</height>
     <font>
       <font family="Liberation Sans" style="REGULAR" size="12.0">
       </font>
@@ -1741,17 +1725,17 @@
     <y>557</y>
     <width>380</width>
     <height>2</height>
+    <line_width>2</line_width>
+    <line_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </line_color>
     <points>
       <point x="1.0" y="1.0">
       </point>
       <point x="379.0" y="1.0">
       </point>
     </points>
-    <line_width>2</line_width>
-    <line_color>
-      <color red="0" green="0" blue="0">
-      </color>
-    </line_color>
   </widget>
   <widget type="choice" version="2.0.0">
     <name>choice button #329</name>
@@ -1865,8 +1849,7 @@
     <text>R</text>
     <x>270</x>
     <y>148</y>
-    <width>12</width>
-    <height>18</height>
+    <width>10</width>
     <font>
       <font family="Liberation Sans" style="REGULAR" size="16.0">
       </font>
@@ -1958,8 +1941,7 @@
     <text>R</text>
     <x>260</x>
     <y>71</y>
-    <width>12</width>
-    <height>18</height>
+    <width>10</width>
     <font>
       <font family="Liberation Sans" style="REGULAR" size="16.0">
       </font>
@@ -1983,8 +1965,7 @@
     <text>R</text>
     <x>147</x>
     <y>275</y>
-    <width>12</width>
-    <height>18</height>
+    <width>10</width>
     <font>
       <font family="Liberation Sans" style="REGULAR" size="16.0">
       </font>
@@ -2008,8 +1989,7 @@
     <text>R</text>
     <x>332</x>
     <y>295</y>
-    <width>12</width>
-    <height>18</height>
+    <width>10</width>
     <font>
       <font family="Liberation Sans" style="REGULAR" size="16.0">
       </font>
@@ -2033,8 +2013,7 @@
     <text>R</text>
     <x>332</x>
     <y>275</y>
-    <width>12</width>
-    <height>18</height>
+    <width>10</width>
     <font>
       <font family="Liberation Sans" style="REGULAR" size="16.0">
       </font>
@@ -2098,17 +2077,17 @@
     <y>533</y>
     <width>290</width>
     <height>1</height>
+    <line_width>1</line_width>
+    <line_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </line_color>
     <points>
       <point x="0.0" y="0.0">
       </point>
       <point x="289.0" y="0.0">
       </point>
     </points>
-    <line_width>1</line_width>
-    <line_color>
-      <color red="0" green="0" blue="0">
-      </color>
-    </line_color>
   </widget>
   <widget type="textupdate" version="2.0.0">
     <name>text update #399</name>
@@ -2139,7 +2118,7 @@
     <x>220</x>
     <y>413</y>
     <width>10</width>
-    <height>16</height>
+    <height>14</height>
     <foreground_color>
       <color red="222" green="19" blue="9">
       </color>
@@ -2183,7 +2162,7 @@
     <x>220</x>
     <y>433</y>
     <width>10</width>
-    <height>16</height>
+    <height>14</height>
     <foreground_color>
       <color red="222" green="19" blue="9">
       </color>
@@ -2227,7 +2206,7 @@
     <x>220</x>
     <y>473</y>
     <width>10</width>
-    <height>16</height>
+    <height>14</height>
     <foreground_color>
       <color red="222" green="19" blue="9">
       </color>
@@ -2271,7 +2250,7 @@
     <x>220</x>
     <y>453</y>
     <width>10</width>
-    <height>16</height>
+    <height>14</height>
     <foreground_color>
       <color red="222" green="19" blue="9">
       </color>
@@ -2319,7 +2298,6 @@
       <color red="51" green="153" blue="0">
       </color>
     </background_color>
-    <tooltip>$(actions)</tooltip>
   </widget>
   <widget type="action_button" version="3.0.0">
     <name>related display #435</name>
@@ -2354,7 +2332,6 @@
       <color red="51" green="153" blue="0">
       </color>
     </background_color>
-    <tooltip>$(actions)</tooltip>
   </widget>
   <widget type="action_button" version="3.0.0">
     <name>related display #439</name>
@@ -2389,7 +2366,6 @@
       <color red="51" green="153" blue="0">
       </color>
     </background_color>
-    <tooltip>$(actions)</tooltip>
   </widget>
   <widget type="action_button" version="3.0.0">
     <name>related display #443</name>
@@ -2424,7 +2400,6 @@
       <color red="51" green="153" blue="0">
       </color>
     </background_color>
-    <tooltip>$(actions)</tooltip>
   </widget>
   <widget type="textentry" version="3.0.0">
     <name>text entry #447</name>
@@ -2503,8 +2478,8 @@
     <text>SECONDS</text>
     <x>188</x>
     <y>497</y>
-    <width>60</width>
-    <height>14</height>
+    <width>45</width>
+    <height>12</height>
     <font>
       <font family="Liberation Sans" style="REGULAR" size="12.0">
       </font>
@@ -2552,7 +2527,7 @@
     <x>240</x>
     <y>562</y>
     <width>25</width>
-    <height>14</height>
+    <height>12</height>
     <font>
       <font family="Liberation Sans" style="REGULAR" size="12.0">
       </font>
@@ -2576,8 +2551,8 @@
     <text>LINK</text>
     <x>240</x>
     <y>572</y>
-    <width>27</width>
-    <height>14</height>
+    <width>25</width>
+    <height>12</height>
     <font>
       <font family="Liberation Sans" style="REGULAR" size="12.0">
       </font>
@@ -2601,8 +2576,8 @@
     <text>ArrayTrig</text>
     <x>5</x>
     <y>540</y>
-    <width>58</width>
-    <height>16</height>
+    <width>70</width>
+    <height>14</height>
     <auto_size>true</auto_size>
   </widget>
   <widget type="textentry" version="3.0.0">
@@ -2646,7 +2621,7 @@
     <x>240</x>
     <y>537</y>
     <width>25</width>
-    <height>14</height>
+    <height>12</height>
     <font>
       <font family="Liberation Sans" style="REGULAR" size="12.0">
       </font>
@@ -2670,8 +2645,8 @@
     <text>LINK</text>
     <x>240</x>
     <y>547</y>
-    <width>27</width>
-    <height>14</height>
+    <width>25</width>
+    <height>12</height>
     <font>
       <font family="Liberation Sans" style="REGULAR" size="12.0">
       </font>
@@ -2696,7 +2671,7 @@
     <x>10</x>
     <y>395</y>
     <width>40</width>
-    <height>14</height>
+    <height>12</height>
     <font>
       <font family="Liberation Sans" style="REGULAR" size="12.0">
       </font>
@@ -2726,8 +2701,8 @@
     <text>UPDATE EVERY</text>
     <x>60</x>
     <y>497</y>
-    <width>93</width>
-    <height>14</height>
+    <width>70</width>
+    <height>12</height>
     <font>
       <font family="Liberation Sans" style="REGULAR" size="12.0">
       </font>
@@ -2739,8 +2714,8 @@
     <text>COPY LAST POINT THROUGH</text>
     <x>60</x>
     <y>517</y>
-    <width>172</width>
-    <height>14</height>
+    <width>140</width>
+    <height>12</height>
     <font>
       <font family="Liberation Sans" style="REGULAR" size="12.0">
       </font>
@@ -2770,8 +2745,7 @@
     <text>R</text>
     <x>270</x>
     <y>537</y>
-    <width>12</width>
-    <height>18</height>
+    <width>10</width>
     <font>
       <font family="Liberation Sans" style="REGULAR" size="16.0">
       </font>
@@ -2795,8 +2769,7 @@
     <text>R</text>
     <x>270</x>
     <y>562</y>
-    <width>12</width>
-    <height>18</height>
+    <width>10</width>
     <font>
       <font family="Liberation Sans" style="REGULAR" size="16.0">
       </font>
@@ -2909,7 +2882,6 @@
         <color red="51" green="153" blue="0">
         </color>
       </background_color>
-      <tooltip>$(actions)</tooltip>
     </widget>
     <widget type="action_button" version="3.0.0">
       <name>related display #547</name>
@@ -2931,7 +2903,6 @@
         <color red="51" green="153" blue="0">
         </color>
       </background_color>
-      <tooltip>$(actions)</tooltip>
     </widget>
   </widget>
   <widget type="group" version="2.0.0">
@@ -2945,8 +2916,7 @@
     <widget type="label" version="2.0.0">
       <name>text #553</name>
       <text>1</text>
-      <width>9</width>
-      <height>18</height>
+      <width>80</width>
       <font>
         <font family="Liberation Sans" style="REGULAR" size="16.0">
         </font>
@@ -2968,8 +2938,7 @@
     <widget type="label" version="2.0.0">
       <name>text #557</name>
       <text>3</text>
-      <width>9</width>
-      <height>18</height>
+      <width>80</width>
       <font>
         <font family="Liberation Sans" style="REGULAR" size="16.0">
         </font>
@@ -2991,8 +2960,7 @@
     <widget type="label" version="2.0.0">
       <name>text #561</name>
       <text>4</text>
-      <width>9</width>
-      <height>18</height>
+      <width>80</width>
       <font>
         <font family="Liberation Sans" style="REGULAR" size="16.0">
         </font>
@@ -3014,8 +2982,7 @@
     <widget type="label" version="2.0.0">
       <name>text #565</name>
       <text>( , , , )</text>
-      <width>42</width>
-      <height>18</height>
+      <width>80</width>
       <font>
         <font family="Liberation Sans" style="REGULAR" size="16.0">
         </font>
@@ -3025,8 +2992,7 @@
     <widget type="label" version="2.0.0">
       <name>text #568</name>
       <text>2</text>
-      <width>9</width>
-      <height>18</height>
+      <width>80</width>
       <font>
         <font family="Liberation Sans" style="REGULAR" size="16.0">
         </font>
@@ -3171,8 +3137,7 @@
     <text>2</text>
     <x>200</x>
     <y>277</y>
-    <width>9</width>
-    <height>18</height>
+    <width>15</width>
     <font>
       <font family="Liberation Sans" style="REGULAR" size="16.0">
       </font>
@@ -3192,8 +3157,7 @@
     <text>4</text>
     <x>200</x>
     <y>297</y>
-    <width>9</width>
-    <height>18</height>
+    <width>15</width>
     <font>
       <font family="Liberation Sans" style="REGULAR" size="16.0">
       </font>
@@ -3213,8 +3177,8 @@
     <text>AfterScan</text>
     <x>5</x>
     <y>565</y>
-    <width>62</width>
-    <height>16</height>
+    <width>65</width>
+    <height>14</height>
     <auto_size>true</auto_size>
   </widget>
 </display>
