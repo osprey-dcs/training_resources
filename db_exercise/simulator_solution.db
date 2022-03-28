@@ -1,0 +1,172 @@
+#if heat on and door closed +0.5
+#if heat off and door closed -0.1
+#if heat on and door open +0.1
+#if heat off and door open -0.5
+record(calc,"_$(P):heatrate")
+{
+    field(INPA, "$(P):heat_RBV CP")
+    field(INPB, "$(P):door_RBV CP")
+    field(INPC, "$(P):temperature_RBV")
+    field(CALC, "A && (!B) ? 0.5 : A && B ? 0.1 : B && (!A) ? -0.5 : -0.1")
+    field(PINI, "YES")
+}
+#Add heatrate to current temperature_RBV
+#72F is the lower limit and 550F the upper
+record(calc, "_$(P):tempcalc")
+{
+    field(INPA, "_$(P):heatrate")
+    field(INPB, "_$(P):tempcalc")
+    field(CALC, "A+B < 72 ? 72 : A+B > 550 ? 550 : A+B")
+    field(SCAN, ".1 second")
+}
+record(ai, "$(P):temperature_RBV"){
+    field(EGU, "F")
+    field(INP, "_$(P):tempcalc CP")
+}
+record(ai, "$(P):tempdisplay_RBV"){
+    field(EGU, "F")
+    field(INP, "$(P):temperature_RBV CP")
+    field(MDEL, "1")
+}
+record(bo, "$(P):heat"){
+    field(ONAM, "ON")
+    field(ZNAM, "OFF")
+    field(VAL, "0")
+    field(PINI, "YES")
+}
+record(bi, "$(P):heat_RBV"){
+    field(INP, "$(P):heat CP")
+    field(ONAM, "ON")
+    field(ZNAM, "OFF")
+}
+record(bo, "$(P):door"){
+    field(ONAM, "OPEN")
+    field(ZNAM, "CLOSED")
+    field(VAL, "0")
+    field(PINI, "YES")
+}
+record(bi, "$(P):door_RBV"){
+    field(ONAM, "OPEN")
+    field(ZNAM, "CLOSED")
+    field(INP, "$(P):door CP")  
+}
+record(bo, "$(P):fan"){
+    field(ONAM, "ON")
+    field(ZNAM, "OFF")
+    field(VAL, "0")
+    field(PINI, "YES")
+}
+record(bi, "$(P):fan_RBV"){
+    field(ONAM, "ON")
+    field(ZNAM, "OFF")
+    field(INP, "$(P):fan CP")
+}
+record(bo, "$(P):light"){
+    field(ONAM, "ON")
+    field(ZNAM, "OFF")
+    field(HIGH, "10")
+    field(PINI, "YES")
+    field(VAL, "0")
+}
+record(bi, "$(P):light_RBV"){
+    field(INP, "$(P):light CP")
+    field(ONAM, "ON")
+    field(ZNAM, "OFF")
+}
+record(bo, "$(P):lock")
+{
+    field(ZNAM, "Controls enabled")
+    field(ONAM, "Controls disabled")
+    field(VAL, "0")
+    field(PINI, "YES")
+    field(FLNK, "$(P):program")
+}
+record(mbbo, "$(P):program")
+{
+    field(SDIS, "$(P):lock")
+    field(ZRVL, "0")
+    field(ZRST, "Off")
+    field(ONVL, "1")
+    field(ONST, "Bake")
+    field(TWVL, "2")
+    field(TWST, "Self-clean")
+    field(THVL, "3")
+    field(THST, "Convection")
+    field(FRVL, "4")
+    field(FRST, "Proof")
+    field(VAL, "0")
+    field(PINI, "YES")
+}
+record(mbbi, "$(P):program_RBV")
+{
+    field(INP, "$(P):program CP")
+    field(ZRVL, "0")
+    field(ZRST, "Off")
+    field(ONVL, "1")
+    field(ONST, "Bake")
+    field(TWVL, "2")
+    field(TWST, "Self-clean")
+    field(THVL, "3")
+    field(THST, "Convection")
+    field(FRVL, "4")
+    field(FRST, "Proof")
+}
+record(ao,"$(P):setpoint")
+{
+    field(EGU,"F")
+    field(PINI, "YES")
+    field(VAL, "0")
+}
+record(calcout, "_$(P):bake")
+{
+    field(INPA, "$(P):program CP")
+    field(INPB, "$(P):temperature_RBV CP")
+    field(INPC, "$(P):setpoint CP")
+    field(CALC, "A#0 && C>(B+0.1) ? 1 : 0" )
+    field(OUT, "$(P):heat PP")
+    field(OOPT, "On Change")
+}
+record(calcout,"_$(P):prooftrig")
+{
+    field(INPA, "$(P):program_RBV CP")
+    field(CALC, "A=4?1:0")
+    field(OUT, "_$(P):proof PP")
+    field(OOPT, "Transition To Non-zero")
+}
+record(seq, "_$(P):proof")
+{
+    field(SELM, "All")
+    field(DOL1, "100")
+    field(LNK1, "$(P):setpoint PP")
+    field(DLY2, "10")
+    field(DOL2, "0")
+    field(LNK2, "$(P):program PP")
+    field(DOL3, "0")
+    field(LNK3, "$(P):setpoint PP")
+}
+record(calcout,"_$(P):cleantrig")
+{
+    field(INPA, "$(P):program_RBV CP")
+    field(CALC, "A=2?1:0")
+    field(OUT, "_$(P):clean PP")
+    field(OOPT, "Transition To Non-zero")
+}
+record(seq, "_$(P):clean")
+{
+    field(SELM, "All")
+    field(DOL1, "500")
+    field(LNK1, "$(P):setpoint PP")
+    field(DLY2, "1800")
+    field(DOL2, "0")
+    field(LNK2, "$(P):program PP")
+    field(DOL3, "0")
+    field(LNK3, "$(P):setpoint PP")
+}
+record(calcout,"_$(P):convtrig")
+{
+    field(INPA, "$(P):program_RBV CP")
+    field(CALC, "A=3?1:0")
+    field(OUT, "$(P):fan PP")
+    field(OOPT, "Every Time")
+}
+
