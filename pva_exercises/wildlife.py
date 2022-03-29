@@ -10,9 +10,6 @@ pv=SharedPV(
     initial=face(gray=True),
 )
 
-Server.forever(providers=[{'demo:wildlife':pv}])
-
-## aka.
-#with Server(providers=[{'wildlife':pv}]):
-#   while True:
-#       time.sleep(9999)
+Server.forever(providers=[{
+	'demo:wildlife':pv,
+}])

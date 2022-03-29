@@ -1,0 +1,6 @@
+ServerOperation
+
+from p4p.client.thread import Context
+ctxt=Context()
+
+print(ctxt.get('demo:sin'))

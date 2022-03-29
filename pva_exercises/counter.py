@@ -7,7 +7,7 @@ from p4p.server.thread import SharedPV
 from p4p.nt import NTScalar
 
 cnt=0
-pv=SharedPV(nt=NTScalar('I'), initial=cnt)
+pv=SharedPV(nt=NTScalar('I'), initial=0.0)
 
 with Server(providers=[{'demo:box':pv}]):
     while True:
