@@ -1,0 +1,53 @@
+record(ao, "$(P)freq") {
+    field(VAL , "0.1")
+    field(PREC, "5")
+    field(EGU , "rad/T")
+    field(DRVH, "9999999")
+    field(DRVL, "0.00000001")
+    field(HOPR, "9999999")
+    field(LOPR, "0.00000001")
+    field(PINI, "YES")
+}
+
+record(calc, "$(P)phase") {
+    field(SCAN, ".1 second")
+    field(INPA, "$(P)freq NPP")
+    field(CALC, "C:=(VAL>=2*PI)?(VAL-2*PI):VAL;C+A")
+    field(HOPR, "6.283185307179586")
+    field(EGU , "rad")
+    field(PREC, "3")
+    field(FLNK, "$(P)sin")
+}
+
+record(calc, "$(P)sin") {
+    field(INPA, "$(P)phase NPP")
+    field(CALC, "sin(A)")
+    field(LOPR, "-1")
+    field(HOPR, "1")
+    field(EGU , "arb")
+    field(PREC, "3")
+    field(FLNK, "$(P)cos")
+}
+
+record(calc, "$(P)cos") {
+    field(INPA, "$(P)phase NPP")
+    field(CALC, "cos(A)")
+    field(LOPR, "-1")
+    field(HOPR, "1")
+    field(EGU , "arb")
+    field(PREC, "3")
+    field(FLNK, "$(P)sin:hist")
+}
+
+record(compress, "$(P)sin:hist") {
+    field(ALG , "Circular Buffer")
+    field(INP , "$(P)sin NPP")
+    field(NSAM, "128")
+    field(FLNK, "$(P)cos:hist")
+}
+
+record(compress, "$(P)cos:hist") {
+    field(ALG , "Circular Buffer")
+    field(INP , "$(P)cos NPP")
+    field(NSAM, "128")
+}

@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<display version="2.0.0">
+  <name>Sin/Cos</name>
+  <macros>
+    <P>demo:</P>
+  </macros>
+  <widget type="textentry" version="3.0.0">
+    <name>Text Entry</name>
+    <pv_name>pva://$(P)freq</pv_name>
+    <x>50</x>
+    <y>30</y>
+    <width>120</width>
+    <height>30</height>
+  </widget>
+  <widget type="combo" version="2.0.0">
+    <name>Combo Box</name>
+    <pv_name>$(P)phase.SCAN</pv_name>
+    <x>190</x>
+    <y>30</y>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update</name>
+    <pv_name>pva://$(P)phase</pv_name>
+    <x>530</x>
+    <y>30</y>
+    <height>30</height>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_1</name>
+    <pv_name>pva://$(P)sin</pv_name>
+    <x>320</x>
+    <y>30</y>
+    <height>30</height>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_2</name>
+    <pv_name>pva://$(P)cos</pv_name>
+    <x>430</x>
+    <y>30</y>
+    <height>30</height>
+  </widget>
+  <widget type="progressbar" version="2.0.0">
+    <name>Text Update_3</name>
+    <pv_name>pva://$(P)phase</pv_name>
+    <x>530</x>
+    <y>70</y>
+    <width>30</width>
+    <height>140</height>
+    <background_color>
+      <color name="Read_Background" red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <horizontal>false</horizontal>
+  </widget>
+  <widget type="progressbar" version="2.0.0">
+    <name>Text Update_4</name>
+    <pv_name>pva://$(P)sin</pv_name>
+    <x>320</x>
+    <y>70</y>
+    <width>30</width>
+    <height>140</height>
+    <background_color>
+      <color name="Read_Background" red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <horizontal>false</horizontal>
+  </widget>
+  <widget type="progressbar" version="2.0.0">
+    <name>Text Update_5</name>
+    <pv_name>pva://$(P)cos</pv_name>
+    <x>430</x>
+    <y>70</y>
+    <width>30</width>
+    <height>140</height>
+    <background_color>
+      <color name="Read_Background" red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <horizontal>false</horizontal>
+  </widget>
+  <widget type="xyplot" version="2.0.0">
+    <name>X/Y Plot</name>
+    <x>10</x>
+    <y>80</y>
+    <width>290</width>
+    <height>190</height>
+    <x_axis>
+      <title>Time</title>
+      <autoscale>true</autoscale>
+      <log_scale>false</log_scale>
+      <minimum>0.0</minimum>
+      <maximum>100.0</maximum>
+      <show_grid>false</show_grid>
+      <title_font>
+        <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+        </font>
+      </title_font>
+      <scale_font>
+        <font name="Default" family="Liberation Sans" style="REGULAR" size="14.0">
+        </font>
+      </scale_font>
+      <visible>true</visible>
+    </x_axis>
+    <y_axes>
+      <y_axis>
+        <title>Arb.</title>
+        <autoscale>false</autoscale>
+        <log_scale>false</log_scale>
+        <minimum>-1.0</minimum>
+        <maximum>1.0</maximum>
+        <show_grid>false</show_grid>
+        <title_font>
+          <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+          </font>
+        </title_font>
+        <scale_font>
+          <font name="Default" family="Liberation Sans" style="REGULAR" size="14.0">
+          </font>
+        </scale_font>
+        <visible>true</visible>
+      </y_axis>
+    </y_axes>
+    <traces>
+      <trace>
+        <name>sine</name>
+        <x_pv></x_pv>
+        <y_pv>pva://$(P)sin:hist</y_pv>
+        <err_pv></err_pv>
+        <axis>0</axis>
+        <trace_type>1</trace_type>
+        <color>
+          <color red="0" green="0" blue="255">
+          </color>
+        </color>
+        <line_width>1</line_width>
+        <line_style>0</line_style>
+        <point_type>0</point_type>
+        <point_size>10</point_size>
+        <visible>true</visible>
+      </trace>
+      <trace>
+        <name>cos</name>
+        <x_pv></x_pv>
+        <y_pv>pva://$(P)cos:hist</y_pv>
+        <err_pv></err_pv>
+        <axis>0</axis>
+        <trace_type>1</trace_type>
+        <color>
+          <color red="255" green="0" blue="0">
+          </color>
+        </color>
+        <line_width>1</line_width>
+        <line_style>0</line_style>
+        <point_type>0</point_type>
+        <point_size>10</point_size>
+        <visible>true</visible>
+      </trace>
+    </traces>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>sine</text>
+    <x>320</x>
+    <y>10</y>
+    <width>60</width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_1</name>
+    <text>cos</text>
+    <x>430</x>
+    <y>10</y>
+    <width>50</width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_2</name>
+    <text>Phase</text>
+    <x>530</x>
+    <y>10</y>
+    <width>70</width>
+  </widget>
+  <widget type="image" version="2.0.0">
+    <name>Image</name>
+    <pv_name>pva://demo:wildlife</pv_name>
+    <x>330</x>
+    <y>260</y>
+    <width>250</width>
+    <height>170</height>
+  </widget>
+</display>
