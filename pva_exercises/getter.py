@@ -1,5 +1,3 @@
-ServerOperation
-
 from p4p.client.thread import Context
 ctxt=Context()
 
