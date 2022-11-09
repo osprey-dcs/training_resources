@@ -1,0 +1,9 @@
+record(ao, "$(P)FLOAT-SP") {
+    field(DTYP, "EtherIP")
+    field(OUT , "@$(PLC) FLOAT")
+}
+record(ai, "$(P)FLOAT-I") {
+    field(DTYP, "EtherIP")
+    field(INP , "@$(PLC) FLOAT")
+    field(SCAN, "1 second")
+}
