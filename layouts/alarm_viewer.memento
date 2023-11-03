@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<memento show_menu="true" show_statusbar="true" show_tabs="true" show_toolbar="true">
+    <DockStage_MAIN height="912.0" width="1448.0" x="875.0" y="416.0">
+        <split pos="0.2697095435684647">
+            <split horizontal="false" pos="0.2621951219512195">
+                <pane fixed="true" selected="0">
+                    <DockItem_d95c289d_5c41_45a3_a5ae_d91802ec18e2 application="alarm_area" input_uri="alarm://tservice:40094/Accelerator"/>
+                </pane>
+                <pane fixed="true" selected="0">
+                    <DockItem_537189e2_2156_48f1_98fb_4dec9cedbaf6 application="alarm_tree" input_uri="alarm://tservice:40094/Accelerator"/>
+                </pane>
+            </split>
+            <pane selected="0">
+                <DockItem_67440cc7_d73d_462e_92cc_4edc8c015144 COL0="25.0" COL1="240.0" COL2="400.0" COL3="130.0" COL4="130.0" COL5="200.0" COL6="100.0" COL7="130.0" COL8="130.0" DIR="0" POS="0.50066401062417" SORT="1" application="alarm_table" input_uri="alarm://tservice:40094/Accelerator"/>
+            </pane>
+        </split>
+    </DockStage_MAIN>
+</memento>

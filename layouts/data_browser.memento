@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<memento show_menu="true" show_statusbar="true" show_tabs="true" show_toolbar="true">
+    <DockStage_MAIN height="912.0" width="1448.0" x="875.0" y="416.0">
+        <pane selected="0">
+            <DockItem_dc4f43b5_954a_418f_92c1_553394ed00cf application="databrowser" left_right_split="0.20027624309392264" plot_tabs_split="0.8002528445006322" property_tab="0" search_panel_split="0.2" show_search="true"/>
+        </pane>
+    </DockStage_MAIN>
+</memento>
